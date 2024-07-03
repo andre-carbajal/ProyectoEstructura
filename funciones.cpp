@@ -63,16 +63,16 @@ int menuusos() {
 
 bool continuar(){
 	int optionContinuar;
-		cout<<"?Desea modificar otro producto?"<<endl;
-		cout<<"1) S?"<<endl;
-		cout<<"2) No"<<endl;
-		cout<<"Ingresa tu opci?n: ";
-		cin>>optionContinuar;
-		if(optionContinuar == 1){
-			limpiar();
-			return true;
-		} 
+	cout<<"?Desea modificar otro producto?"<<endl;
+	cout<<"1) S?"<<endl;
+	cout<<"2) No"<<endl;
+	cout<<"Ingresa tu opci?n: ";
+	cin>>optionContinuar;
+	if(optionContinuar == 1){
 		limpiar();
-		return false;
+		return true;
+	} 
+	limpiar();
+	return false;
 }
 

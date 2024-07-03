@@ -50,31 +50,28 @@ void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
 
 //insertar 
 void insertarBebida(Bebida bebidas[], int nBebidas){
-	int i = nBebidas, option;
+	int opcion;
 	bool continuar;
 	do{
 		cout<<"Ingresa ID del producto:"<<endl;
-		cin>>bebidas[i].ID;
+		cin>>bebidas[nBebidas].ID;
 		cout<<"Ingresa nombre del producto: "<<endl;
-		cin>>bebidas[i].nombre;
+		cin>>bebidas[nBebidas].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
-		cin>>bebidas[i].costo;
+		cin>>bebidas[nBebidas].costo;
 		cout<<"Ingresa la cantidad del producto:"<<endl;
-		cin>>bebidas[i].cantidad;
+		cin>>bebidas[nBebidas].cantidad;
 		cout<<"Capacidad en militros (ml) del producto:"<<endl;
-		cin>>bebidas[i].ml;
+		cin>>bebidas[nBebidas].ml;
 		limpiar();
-		i++;
+		nBebidas++;
 		cout<<"?Desea agregar otro producto?"<<endl;
 		cout<<"1) S?"<<endl;
 		cout<<"2) No"<<endl;
 		cout<<"Ingresa tu opci?n: ";
-		cin>>option;
-		if(option == 1){
+		cin>>opcion;
+		if(opcion == 1){
 			continuar = true;
-			limpiar();
-		}else if(option == 2){
-			continuar = false;
 			limpiar();
 		}else{
 			continuar = false;
@@ -84,19 +81,19 @@ void insertarBebida(Bebida bebidas[], int nBebidas){
 }
 
 void insertarSnack(Snack snacks[], int nSnacks){
-	int i = nSnacks, option;
+	int option;
 	bool continuar;
 	do{
 		cout<<"Ingresa ID del producto:"<<endl;
-		cin>>snacks[i].ID;
+		cin>>snacks[nSnacks].ID;
 		cout<<"Ingresa nombre del producto: "<<endl;
-		cin>>snacks[i].nombre;
+		cin>>snacks[nSnacks].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
-		cin>>snacks[i].costo;
+		cin>>snacks[nSnacks].costo;
 		cout<<"Ingresa la cantidad del producto:"<<endl;
-		cin>>snacks[i].cantidad;
+		cin>>snacks[nSnacks].cantidad;
 		limpiar();
-		i++;
+		nSnacks++;
 		cout<<"?Desea agregar otro producto?"<<endl;
 		cout<<"1) S?"<<endl;
 		cout<<"2) No"<<endl;
@@ -113,19 +110,19 @@ void insertarSnack(Snack snacks[], int nSnacks){
 }
 
 void insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
-	int i = nAbarrotes, option;
+	int option;
 	bool continuar;
 	do{
 		cout<<"Ingresa ID del producto:"<<endl;
-		cin>>abarrotes[i].ID;
+		cin>>abarrotes[nAbarrotes].ID;
 		cout<<"Ingresa nombre del producto: "<<endl;
-		cin>>abarrotes[i].nombre;
+		cin>>abarrotes[nAbarrotes].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
-		cin>>abarrotes[i].costo;
+		cin>>abarrotes[nAbarrotes].costo;
 		cout<<"Ingresa la cantidad del producto:"<<endl;
-		cin>>abarrotes[i].cantidad;
+		cin>>abarrotes[nAbarrotes].cantidad;
 		limpiar();
-		i++;
+		nAbarrotes++;
 		cout<<"?Desea agregar otro producto?"<<endl;
 		cout<<"1) S?"<<endl;
 		cout<<"2) No"<<endl;
