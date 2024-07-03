@@ -13,28 +13,28 @@ void limpiar() {
 #endif
 }
 
-bool login(Persona usuarios[], string usuario, string contrasena, int nUsuarios) {
+bool login(Persona personas[], string usuario, string contrasena, int nUsuarios) {
     system("title Login");
     cout << "Ingrese su usuario: ";
     cin >> usuario;
     cout << "Ingrese su contrasena: ";
     cin >> contrasena;
     for (int i = 0; i < nUsuarios; i++) {
-        if (usuarios[i].usuario == usuario && usuarios[i].contrasena == contrasena) {
+        if (personas[i].usuario == usuario && personas[i].contrasena == contrasena) {
             return true;
         }
     }
     return false;
 }
 
-int registrar(Persona usuarios[], int nUsuarios){
+int registrar(Persona personas[], int nPersonas){
 	system("title Nuevo Usuario");
 	cout << "Ingrese el usuario: ";
-	cin >> usuarios[nUsuarios].usuario;
+	cin >> personas[nPersonas].usuario;
 	cout << "Ingrese la contraseña: ";
-	cin >> usuarios[nUsuarios].contrasena;
-	usuarios[nUsuarios].role = 0;
-	return nUsuarios+1;
+	cin >> personas[nPersonas].contrasena;
+	personas[nPersonas].role = 0;
+	return nPersonas+1;
 }
 
 int menulogin() {

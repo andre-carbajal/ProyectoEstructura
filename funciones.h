@@ -6,10 +6,10 @@
 
 void limpiar();
 int menulogin();
-bool login(Persona usuarios[], string usuario, std::string contrasena, int nUsuarios);
+bool login(Persona personas[], string usuario, string contrasena, int nPersonas);
 void menuinvs();
 int menuusos();
-int registrar(Persona usuarios[], int nPersonas);
+int registrar(Persona personas[], int nPersonas);
 void registrarProducto(bool esBebida, Inventario producto[]);
 
 #endif //PROYECTOESTRUCTURA_FUNCIONES_H

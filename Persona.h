@@ -11,7 +11,7 @@ struct Persona {
     int role; // role 0: admin, role 1: user
 };
 
-void initUsuarios(Persona usuarios[]);
+void initUsuarios(Persona personas[]);
 
 #endif //PROYECTOESTRUCTURA_PERSONA_H
 
