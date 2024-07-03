@@ -48,25 +48,97 @@ int main() {
 	
 	                    switch (opcionInv) {
 	                        case 1:
+	                        	continuarInv = true;
 	                            system("title Bebidas");
 	                            opcionUsos = menuusos();
 	                            limpiar();
-	                            accionesBebidas(opcionInv, bebidas);
-	                            continuarInv = true;
+	                            do{
+									switch(opcionUsos){
+									case 1:
+										continuarMenu = true;
+										break;
+									case 2:
+										continuarMenu = true;
+										break;
+									case 3:
+										continuarMenu = true;
+										break;
+									case 4:
+										continuarMenu = true;
+										break;
+									case 5:
+										continuarMenu = true;
+										break;
+									case 6:
+										continuarMenu = false;
+										break;
+									default:
+							            cout << "Opción invalida" << endl;
+							            break;
+									}
+								}while(continuarMenu);
 	                            break;
 	                        case 2:
+	                        	continuarInv = true;
 	                            system("title Snacks");
 	                            opcionUsos = menuusos();
 	                            limpiar();
-	                            accionesSnacks(opcionInv, snacks);
-	                            continuarInv = true;
+	                            do{
+									switch(opcionUsos){
+									case 1:
+										continuarMenu = true;
+										break;
+									case 2:
+										continuarMenu = true;
+										break;
+									case 3:
+										continuarMenu = true;
+										break;
+									case 4:
+										continuarMenu = true;
+										break;
+									case 5:
+										continuarMenu = true;
+										break;
+									case 6:
+										continuarMenu = false;
+										break;
+									default:
+							            cout << "Opción invalida" << endl;
+							            break;
+									}
+								}while(continuarMenu);
 	                            break;
 	                        case 3:
+	                        	continuarInv = true;
 	                            system("title Abarrotes");
 	                            opcionUsos = menuusos();
 	                            limpiar();
-	                            accionesAbarrotes(opcionInv, abarrotes);
-	                            continuarInv = true;
+	                            do{
+									switch(opcionUsos){
+									case 1:
+										continuarMenu = true;
+										break;
+									case 2:
+										continuarMenu = true;
+										break;
+									case 3:
+										continuarMenu = true;
+										break;
+									case 4:
+										continuarMenu = true;
+										break;
+									case 5:
+										continuarMenu = true;
+										break;
+									case 6:
+										continuarMenu = false;
+										break;
+									default:
+							            cout << "Opción invalida" << endl;
+							            break;
+									}
+								}while(continuarMenu);
 	                            break;
 	                        case 4:
 	                            continuarInv = false;
