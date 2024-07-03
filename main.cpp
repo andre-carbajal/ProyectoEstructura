@@ -44,19 +44,19 @@ int main() {
                             system("title Bebidas");
                             opcionUsos = menuusos();
                             limpiar();
-                            registrarProducto(true, productos);
+                            acciones(opcionInv, productos, true);
                             break;
                         case 2:
                             system("title Snacks");
                             opcionUsos = menuusos();
                             limpiar();
-                            registrarProducto(false, productos);
+                            acciones(opcionInv, productos, false);
                             break;
                         case 3:
                             system("title Abarrotes");
                             opcionUsos = menuusos();
                             limpiar();
-                            registrarProducto(false, productos);
+                            acciones(opcionInv, productos, false);
                             break;
                         case 4:
                             break;

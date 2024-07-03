@@ -54,4 +54,23 @@ int menuusos() {
     return option;
 }
 
+void acciones(int opcionUsos,Inventario productos[] ,bool esBebida){
+	switch(opcionUsos){
+		case 1:
+			insertarProducto(esBebida, productos);
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		default:
+            cout << "Opción invalida" << endl;
+            break;
+	}
+}
+
 

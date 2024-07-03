@@ -7,6 +7,7 @@ void limpiar();
 int menulogin();
 int menuinvs();
 int menuusos();
+void acciones(int opcionUsos,Inventario productos[] ,bool esBebida);
 
 #endif //PROYECTOESTRUCTURA_FUNCIONES_H
 

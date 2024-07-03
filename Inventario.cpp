@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void registrarProducto(bool esBebida, Inventario producto[]){
+void insertarProducto(bool esBebida, Inventario producto[]){
 	int i=0;
 	do{
 		cout<<"ID del producto:"<<endl;

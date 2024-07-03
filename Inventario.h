@@ -13,7 +13,7 @@ struct Inventario{
 	int ml;
 };
 
-void registrarProducto(bool esBebida, Inventario producto[]);
+void insertarProducto(bool esBebida, Inventario producto[]);
 
 #endif //PROYECTOESTRUCTURA_INVENTARIO_H
 
