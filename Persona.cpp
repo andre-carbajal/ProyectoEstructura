@@ -17,3 +17,4 @@ void initUsuarios(Persona usuarios[]) {
     usuarios[4].contrasena = "haydee";
     usuarios[4].role = 0;
 }
+

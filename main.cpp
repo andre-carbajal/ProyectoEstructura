@@ -2,14 +2,17 @@
 #include <locale>
 #include "Persona.h"
 #include "funciones.h"
+#include "Inventario.h"
 
 using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Spanish");
+    
+    Inventario productos[999];
 
     int nPersonas = 5;
-    Persona usuarios[nPersonas];
+    Persona usuarios[999];
     initUsuarios(usuarios);
 
     string usuario, contrasena;
@@ -27,6 +30,8 @@ int main() {
                 encontrado = login(usuarios, usuario, contrasena, nPersonas);
 
                 if (encontrado) {
+                    intentos = 0;
+
                     system("title Sistema integrado");
                     limpiar();
 
@@ -39,23 +44,27 @@ int main() {
                         case 1:
                             system("title Bebidas");
                             menuusos();
+                            limpiar();
+                            registrarProducto(true, productos);
                             break;
                         case 2:
                             system("title Snacks");
                             menuusos();
+                            limpiar();
+                            registrarProducto(false, productos);
                             break;
                         case 3:
                             system("title Abarrotes");
                             menuusos();
+                            limpiar();
+                            registrarProducto(false, productos);
                             break;
                         case 4:
-                            return 0;
+                            break;
                         default:
                             cout << "Opción invalida" << endl;
                             break;
                     }
-
-                    return 0;
                 } else {
                     limpiar();
                     intentos++;
@@ -64,8 +73,14 @@ int main() {
                 }
 
                 break;
-
+                
             case 2:
+				nPersonas = registrar(usuarios, nPersonas);
+				limpiar();
+				break;
+
+            case 3:
+                cout << "Saliendo..." << endl;
                 return 0;
 
             default:
@@ -77,3 +92,4 @@ int main() {
 
     return 0;
 }
+

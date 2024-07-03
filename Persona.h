@@ -14,3 +14,4 @@ struct Persona {
 void initUsuarios(Persona usuarios[]);
 
 #endif //PROYECTOESTRUCTURA_PERSONA_H
+
