@@ -27,16 +27,6 @@ bool login(Persona personas[], string usuario, string contrasena, int nUsuarios)
     return false;
 }
 
-int registrar(Persona personas[], int nPersonas){
-	system("title Nuevo Usuario");
-	cout << "Ingrese el usuario: ";
-	cin >> personas[nPersonas].usuario;
-	cout << "Ingrese la contraseña: ";
-	cin >> personas[nPersonas].contrasena;
-	personas[nPersonas].role = 0;
-	return nPersonas+1;
-}
-
 int menulogin() {
     system("title Tiendita de don pepe");
     int option;

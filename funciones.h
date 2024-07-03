@@ -9,7 +9,6 @@ int menulogin();
 bool login(Persona personas[], string usuario, string contrasena, int nPersonas);
 void menuinvs();
 int menuusos();
-int registrar(Persona personas[], int nPersonas);
 void registrarProducto(bool esBebida, Inventario producto[]);
 
 #endif //PROYECTOESTRUCTURA_FUNCIONES_H

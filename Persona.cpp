@@ -1,4 +1,7 @@
+#include <iostream>
 #include "Persona.h"
+
+using namespace std;
 
 void initUsuarios(Persona personas[]) {
     personas[0].usuario = "andre";
@@ -18,3 +21,12 @@ void initUsuarios(Persona personas[]) {
     personas[4].role = 0;
 }
 
+int registrarUsuario(Persona personas[], int nPersonas){
+	system("title Nuevo Usuario");
+	cout << "Ingrese el usuario: ";
+	cin >> personas[nPersonas].usuario;
+	cout << "Ingrese la contraseña: ";
+	cin >> personas[nPersonas].contrasena;
+	personas[nPersonas].role = 0;
+	return nPersonas+1;
+}

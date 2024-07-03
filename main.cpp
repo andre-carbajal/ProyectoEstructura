@@ -75,7 +75,7 @@ int main() {
                 break;
                 
             case 2:
-				nPersonas = registrar(usuarios, nPersonas);
+				nPersonas = registrarUsuario(usuarios, nPersonas);
 				limpiar();
 				break;
 
