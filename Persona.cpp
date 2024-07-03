@@ -41,6 +41,6 @@ int registrarUsuario(Persona personas[], int nPersonas){
 	cin >> personas[nPersonas].usuario;
 	cout << "Ingrese la contraseña: ";
 	cin >> personas[nPersonas].contrasena;
-	personas[nPersonas].role = 0;
+	personas[nPersonas].role = 1;
 	return nPersonas+1;
 }
