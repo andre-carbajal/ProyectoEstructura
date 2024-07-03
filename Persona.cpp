@@ -21,6 +21,20 @@ void initUsuarios(Persona personas[]) {
     personas[4].role = 0;
 }
 
+bool loginUsuario(Persona personas[], string usuario, string contrasena, int nUsuarios) {
+    system("title Login");
+    cout << "Ingrese su usuario: ";
+    cin >> usuario;
+    cout << "Ingrese su contrasena: ";
+    cin >> contrasena;
+    for (int i = 0; i < nUsuarios; i++) {
+        if (personas[i].usuario == usuario && personas[i].contrasena == contrasena) {
+            return true;
+        }
+    }
+    return false;
+}
+
 int registrarUsuario(Persona personas[], int nPersonas){
 	system("title Nuevo Usuario");
 	cout << "Ingrese el usuario: ";

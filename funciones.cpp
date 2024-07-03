@@ -13,20 +13,6 @@ void limpiar() {
 #endif
 }
 
-bool login(Persona personas[], string usuario, string contrasena, int nUsuarios) {
-    system("title Login");
-    cout << "Ingrese su usuario: ";
-    cin >> usuario;
-    cout << "Ingrese su contrasena: ";
-    cin >> contrasena;
-    for (int i = 0; i < nUsuarios; i++) {
-        if (personas[i].usuario == usuario && personas[i].contrasena == contrasena) {
-            return true;
-        }
-    }
-    return false;
-}
-
 int menulogin() {
     system("title Tiendita de don pepe");
     int option;
@@ -61,26 +47,6 @@ int menuusos() {
     cin >> option;
 
     return option;
-}
-
-void registrarProducto(bool esBebida, Inventario producto[]){
-	int i=0;
-	do{
-		cout<<"ID del producto:"<<endl;
-		cin>>producto[i].ID;
-		cout<<"nombre del producto: "<<endl;
-		cin>>producto[i].nombre;
-		cout<<"Costo producto:"<<endl;
-		cin>>producto[i].costo;
-		cout<<"Cantidad del producto:"<<endl;
-		cin>>producto[i].cantidad;
-		if(esBebida){
-			cout<<"ml del producto:"<<endl;
-			cin>>producto[i].ml;break;
-		 }
-		limpiar();
-		i++;
-	}while(i<=6);	
 }
 
 

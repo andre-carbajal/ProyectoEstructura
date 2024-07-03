@@ -27,7 +27,7 @@ int main() {
 
         switch (opcion) {
             case 1:
-                encontrado = login(usuarios, usuario, contrasena, nPersonas);
+                encontrado = loginUsuario(usuarios, usuario, contrasena, nPersonas);
 
                 if (encontrado) {
                     intentos = 0;

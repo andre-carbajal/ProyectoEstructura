@@ -12,6 +12,7 @@ struct Persona {
 };
 
 void initUsuarios(Persona personas[]);
+bool loginUsuario(Persona personas[], string usuario, string contrasena, int nPersonas);
 int registrarUsuario(Persona personas[], int nPersonas);
 
 #endif //PROYECTOESTRUCTURA_PERSONA_H
