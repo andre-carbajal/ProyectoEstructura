@@ -29,13 +29,13 @@ struct Abarrote{
 
 //mostrar 
 void mostrarBebidas(Bebida bebidas[], int nBebidas);
-void mostrarSnacks(Snack snacks[], int nSanks);
+void mostrarSnacks(Snack snacks[], int nSnacks);
 void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes);
 
 //insertar 
-void insertarBebidas(Bebida bebidas[], int nBebidas);
-void insertarSnacks(Snack snacks[], int nSnacks);
-void insertarAbarrotes(Abarrote abarrotes[], int nAbarrotes);
+void insertarBebida(Bebida bebidas[], int nBebidas);
+void insertarSnack(Snack snacks[], int nSnacks);
+void insertarAbarrote(Abarrote abarrotes[], int nAbarrotes);
 
 //buscar
 void buscarBebidas(Bebida bebidas[], int nBebidas);
@@ -44,8 +44,8 @@ void buscarAbarrotes(Abarrote abarrotes[], int nAbarrotes);
 
 //actualizar
 void actualizarBebidas(Bebida bebidas[], int nBebidas);
-void actualizarSnacks(Snack snacks[], int nSnacks);
-void actualizarAbarrotes(Abarrote abarrotes[], int nAbarrotes);
+void actualizarSnack(Snack snacks[], int nSnacks);
+void actualizarAbarrote(Abarrote abarrotes[], int nAbarrotes);
 
 //eliminar
 void eliminarBebida(Bebida bebidas[], int nBebidas);

@@ -55,18 +55,23 @@ int main() {
 	                            do{
 									switch(opcionUsos){
 									case 1:
+										mostrarBebidas(bebidas, nBebidas);
 										continuarMenu = true;
 										break;
 									case 2:
+										insertarBebida(bebidas, nBebidas);
 										continuarMenu = true;
 										break;
 									case 3:
+										buscarBebidas(bebidas, nBebidas);
 										continuarMenu = true;
 										break;
 									case 4:
+										actualizarBebidas(bebidas, nBebidas);
 										continuarMenu = true;
 										break;
 									case 5:
+										eliminarBebida(bebidas, nBebidas);
 										continuarMenu = true;
 										break;
 									case 6:
@@ -86,18 +91,23 @@ int main() {
 	                            do{
 									switch(opcionUsos){
 									case 1:
+										mostrarSnacks(snacks, nSnacks);
 										continuarMenu = true;
 										break;
 									case 2:
+										insertarSnack(snacks, nSnacks);
 										continuarMenu = true;
 										break;
 									case 3:
+										buscarSnacks(snacks, nSnacks);
 										continuarMenu = true;
 										break;
 									case 4:
+										actualizarSnack(snacks, nSnacks);
 										continuarMenu = true;
 										break;
 									case 5:
+										eliminarSnack(snacks, nSnacks);
 										continuarMenu = true;
 										break;
 									case 6:
@@ -117,18 +127,23 @@ int main() {
 	                            do{
 									switch(opcionUsos){
 									case 1:
+										mostrarAbarrotes(abarrotes, nAbarrotes);
 										continuarMenu = true;
 										break;
 									case 2:
+										insertarAbarrote(abarrotes, nAbarrotes);
 										continuarMenu = true;
 										break;
 									case 3:
+										buscarAbarrotes(abarrotes, nAbarrotes);
 										continuarMenu = true;
 										break;
 									case 4:
+										actualizarAbarrote(abarrotes, nAbarrotes);
 										continuarMenu = true;
 										break;
 									case 5:
+										eliminarAbarrote(abarrotes, nAbarrotes);
 										continuarMenu = true;
 										break;
 									case 6:
