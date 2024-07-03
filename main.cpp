@@ -17,7 +17,7 @@ int main() {
 
     string usuario, contrasena;
 
-    int opcionLogin, opcionInv;
+    int opcionLogin, opcionInv, opcionUsos;
     bool encontrado;
     int maxintentos = 3;
     int intentos = 0;
@@ -42,19 +42,19 @@ int main() {
                     switch (opcionInv) {
                         case 1:
                             system("title Bebidas");
-                            menuusos();
+                            opcionUsos = menuusos();
                             limpiar();
                             registrarProducto(true, productos);
                             break;
                         case 2:
                             system("title Snacks");
-                            menuusos();
+                            opcionUsos = menuusos();
                             limpiar();
                             registrarProducto(false, productos);
                             break;
                         case 3:
                             system("title Abarrotes");
-                            menuusos();
+                            opcionUsos = menuusos();
                             limpiar();
                             registrarProducto(false, productos);
                             break;

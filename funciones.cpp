@@ -27,12 +27,12 @@ int menulogin() {
 
 int menuinvs() {
 	int option;
-    cout << "?BIENVENIDO!" << endl;
+    cout << "!BIENVENIDO!" << endl;
     cout << "Seleccione el inventario que desea modificar o usar: " << endl;
     cout << "1) Bebidas" << endl;
     cout << "2) Snacks" << endl;
     cout << "3) Abarrotes" << endl;
-    cout << "4) Salir" << endl;
+    cout << "4) Regresar" << endl;
     cout << "Ingrese una opción: ";
     
     cin >> option;
@@ -47,8 +47,8 @@ int menuusos() {
     cout << "2) Buscar" << endl;
     cout << "3) Actualizar" << endl;
     cout << "4) Eliminar" << endl;
-    cout << "5) Salir" << endl;
-    cout << "Ingrese una opcion: ";
+    cout << "5) Regresar" << endl;
+    cout << "Ingrese una opción: ";
     cin >> option;
 
     return option;
