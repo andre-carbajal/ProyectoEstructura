@@ -50,38 +50,37 @@ void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
 
 //insertar 
 void insertarBebida(Bebida bebidas[], int nBebidas){
-    int option;
-    bool continuar;
-    do {
-        cout << "Ingresa ID del producto:" << endl;
-        cin >> bebidas[nBebidas].ID;
-        cout << "Ingresa nombre del producto: " << endl;
-        cin >> bebidas[nBebidas].nombre;
-        cout << "Ingresa el costo del producto:" << endl;
-        cin >> bebidas[nBebidas].costo;
-        cout << "Ingresa la cantidad del producto:" << endl;
-        cin >> bebidas[nBebidas].cantidad;
-        cout << "Capacidad en militros (ml) del producto:" << endl;
-        cin >> bebidas[nBebidas].ml;
-        limpiar();
-        nBebidas++; // Aumentamos el número total de bebidas correctamente
-        cout << "¿Desea agregar otro producto?" << endl;
-        cout << "1) Sí" << endl;
-        cout << "2) No" << endl;
-        cout << "Ingresa tu opción: ";
-        cin >> option;
-        if (option == 1) {
-            continuar = true;
-            limpiar();
-        } else if (option == 2) {
-            continuar = false;
-            limpiar();
-        } else {
-            cout << "Opción inválida. Saliendo." << endl;
-            continuar = false;
-            limpiar();
-        }
-    } while (continuar);
+	int i = nBebidas, option;
+	bool continuar;
+	do{
+		cout<<"Ingresa ID del producto:"<<endl;
+		cin>>bebidas[i].ID;
+		cout<<"Ingresa nombre del producto: "<<endl;
+		cin>>bebidas[i].nombre;
+		cout<<"Ingresa el costo del producto:"<<endl;
+		cin>>bebidas[i].costo;
+		cout<<"Ingresa la cantidad del producto:"<<endl;
+		cin>>bebidas[i].cantidad;
+		cout<<"Capacidad en militros (ml) del producto:"<<endl;
+		cin>>bebidas[i].ml;
+		limpiar();
+		i++;
+		cout<<"?Desea agregar otro producto?"<<endl;
+		cout<<"1) S?"<<endl;
+		cout<<"2) No"<<endl;
+		cout<<"Ingresa tu opci?n: ";
+		cin>>option;
+		if(option == 1){
+			continuar = true;
+			limpiar();
+		}else if(option == 2){
+			continuar = false;
+			limpiar();
+		}else{
+			continuar = false;
+			limpiar();
+		}
+	}while(continuar);
 }
 
 void insertarSnack(Snack snacks[], int nSnacks){
