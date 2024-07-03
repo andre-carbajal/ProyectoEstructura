@@ -5,7 +5,7 @@
 
 void limpiar();
 int menulogin();
-void menuinvs();
+int menuinvs();
 int menuusos();
 
 #endif //PROYECTOESTRUCTURA_FUNCIONES_H

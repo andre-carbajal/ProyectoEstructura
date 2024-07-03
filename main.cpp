@@ -17,15 +17,15 @@ int main() {
 
     string usuario, contrasena;
 
-    int opcion, opcionInv;
+    int opcionLogin, opcionInv;
     bool encontrado;
     int maxintentos = 3;
     int intentos = 0;
 
     do {
-        opcion = menulogin();
+        opcionLogin = menulogin();
 
-        switch (opcion) {
+        switch (opcionLogin) {
             case 1:
                 encontrado = loginUsuario(usuarios, usuario, contrasena, nPersonas);
 
@@ -35,8 +35,7 @@ int main() {
                     system("title Sistema integrado");
                     limpiar();
 
-                    menuinvs();
-                    cin >> opcionInv;
+                    opcionInv = menuinvs();
 
                     limpiar();
 
