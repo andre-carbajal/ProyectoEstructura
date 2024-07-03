@@ -9,11 +9,15 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Spanish");
     
-    Inventario productos[999];
+    Bebida bebidas[999];
+    Snack snacks[999];
+    Abarrote abarrotes[999];
+    int nBebidas = 0;
+    int nSnacks = 0;
+    int nAbarrotes = 0;
 
+	Persona usuarios[999];
     int nPersonas = 5;
-    Persona usuarios[999];
-    initUsuarios(usuarios);
 
     string usuario, contrasena;
 
@@ -21,6 +25,8 @@ int main() {
     bool encontrado;
     int maxintentos = 3;
     int intentos = 0;
+    
+    initUsuarios(usuarios);
 
     do {
         opcionLogin = menulogin();
@@ -44,19 +50,19 @@ int main() {
                             system("title Bebidas");
                             opcionUsos = menuusos();
                             limpiar();
-                            acciones(opcionInv, productos, true);
+                            accionesBebidas(opcionInv, bebidas);
                             break;
                         case 2:
                             system("title Snacks");
                             opcionUsos = menuusos();
                             limpiar();
-                            acciones(opcionInv, productos, false);
+                            accionesSnacks(opcionInv, snacks);
                             break;
                         case 3:
                             system("title Abarrotes");
                             opcionUsos = menuusos();
                             limpiar();
-                            acciones(opcionInv, productos, false);
+                            accionesAbarrotes(opcionInv, abarrotes);
                             break;
                         case 4:
                             break;

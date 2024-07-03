@@ -54,10 +54,45 @@ int menuusos() {
     return option;
 }
 
-void acciones(int opcionUsos,Inventario productos[] ,bool esBebida){
+void accionesBebidas(int opcionUsos,Bebida bebidas[]){
 	switch(opcionUsos){
 		case 1:
-			insertarProducto(esBebida, productos);
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		default:
+            cout << "Opción invalida" << endl;
+            break;
+	}
+}
+
+void accionesSnacks(int opcionUsos,Snack snaks[]){
+	switch(opcionUsos){
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		default:
+            cout << "Opción invalida" << endl;
+            break;
+	}	
+}
+
+void accionesAbarrotes(int opcionUsos,Abarrote abarrotes[]){
+	switch(opcionUsos){
+		case 1:
 			break;
 		case 2:
 			break;
