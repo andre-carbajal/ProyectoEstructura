@@ -68,7 +68,7 @@ int main() {
 											continuarMenu = true;
 											break;
 										case 4:
-											actualizarBebidas(bebidas, nBebidas);
+											actualizarBebida(bebidas, nBebidas);
 											continuarMenu = true;
 											break;
 										case 5:

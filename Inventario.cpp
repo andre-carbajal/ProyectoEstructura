@@ -153,16 +153,133 @@ void buscarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
 }
 
 //actualizar
-void actualizarBebidas(Bebida bebidas[], int nBebidas){
-	
+void actualizarBebida(Bebida bebidas[], int nBebidas){
+	int option, ID, a, optionContinuar;
+	bool continuar, optinvalida;
+	do{
+		cout<<"Digite ID del producto que desea modificar: ";
+		cin>>ID;
+		for (int i = 0; i < nBebidas; i++) {
+        	if (bebidas[i].ID == ID) {
+            	a = i;
+        	}
+    	}
+		cout<<"¡ID encontrado!"<<endl;
+		retrasar();
+		limpiar();
+		do{
+			cout<<"¿Que desea modificar en "<<bebidas[a].nombre<<" de "<<bebidas[a].ml<<"ml? "<<endl;
+			cout<<"1) Costo"<<endl;
+			cout<<"2) Cantidad"<<endl;
+			cout<<"Ingresa tu opción: ";
+			cin>>option;
+			limpiar();
+			if(option == 1){
+				cout<<"Ingresa el nuevo costo del producto:"<<endl;
+				cin>>bebidas[a].costo;
+				optionContinuar = false;
+				limpiar();
+			} else if(option == 2) {
+				cout<<"Ingresa la nueva cantidad del producto:"<<endl;
+				cin>>bebidas[a].cantidad;
+				optionContinuar = false;
+				limpiar();
+			} else {
+				cout<<"Opción inválida. Intente de nuevo."<<endl;
+				optionContinuar = true;
+				retrasar();
+				limpiar();
+			}
+		}while(optionContinuar);
+		limpiar();
+		continuar = continuarModificar();
+	}while(continuar);
 }
 
 void actualizarSnack(Snack snacks[], int nSnacks){
-	
+	int option, ID, a, optionContinuar;
+	bool continuar, optinvalida;
+	do{
+		cout<<"Digite ID del producto que desea modificar: ";
+		cin>>ID;
+		for (int i = 0; i < nSnacks; i++) {
+        	if (snacks[i].ID == ID) {
+            	a = i;
+        	}
+    	}
+		cout<<"¡ID encontrado!"<<endl;
+		retrasar();
+		limpiar();
+		do{
+			cout<<"¿Que desea modificar en "<<snacks[a].nombre<<"? "<<endl;
+			cout<<"1) Costo"<<endl;
+			cout<<"2) Cantidad"<<endl;
+			cout<<"Ingresa tu opción: ";
+			cin>>option;
+			limpiar();
+			if(option == 1){
+				cout<<"Ingresa el nuevo costo del producto:"<<endl;
+				cin>>snacks[a].costo;
+				optionContinuar = false;
+				limpiar();
+			} else if(option == 2) {
+				cout<<"Ingresa la nueva cantidad del producto:"<<endl;
+				cin>>snacks[a].cantidad;
+				optionContinuar = false;
+				limpiar();
+			} else {
+				cout<<"Opción inválida. Intente de nuevo."<<endl;
+				optionContinuar = true;
+				retrasar();
+				limpiar();
+			}
+		}while(optionContinuar);
+		limpiar();
+		continuar = continuarModificar();
+	}while(continuar);
 }
 
 void actualizarAbarrote(Abarrote abarrotes[], int nAbarrotes){
-	
+	int option, ID, a, optionContinuar;
+	bool continuar, optinvalida;
+	do{
+		cout<<"Digite ID del producto que desea modificar: ";
+		cin>>ID;
+		for (int i = 0; i < nAbarrotes; i++) {
+        	if (abarrotes[i].ID == ID) {
+            	a = i;
+        	}
+    	}
+		cout<<"¡ID encontrado!"<<endl;
+		retrasar();
+		limpiar();
+		do{
+			cout<<"¿Que desea modificar en "<<abarrotes[a].nombre<<"? "<<endl;
+			cout<<"1) Costo"<<endl;
+			cout<<"2) Cantidad"<<endl;
+			cout<<"Ingresa tu opción: ";
+			cin>>option;
+			limpiar();
+			if(option == 1){
+				cout<<"Ingresa el nuevo costo del producto:"<<endl;
+				cin>>abarrotes[a].costo;
+				optionContinuar = false;
+				limpiar();
+			} else if(option == 2) {
+				cout<<"Ingresa la nueva cantidad del producto:"<<endl;
+				cin>>abarrotes[a].cantidad;
+				optionContinuar = false;
+				limpiar();
+			} else {
+				cout<<"Opción inválida. Intente de nuevo."<<endl;
+				optionContinuar = true;
+				retrasar();
+				limpiar();
+			}
+		}while(optionContinuar);
+		limpiar();
+		continuar = continuarModificar();
+	}while(continuar);
 }
 
 //eliminar
@@ -177,3 +294,19 @@ void eliminarSnack(Snack snacks[], int nSnacks){
 void eliminarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 	
 }
+
+bool continuarModificar(){
+	int optionContinuar;
+	cout<<"¿Desea modificar otro producto?"<<endl;
+	cout<<"1) Sí"<<endl;
+	cout<<"2) No"<<endl;
+	cout<<"Ingresa tu opción: ";
+	cin>>optionContinuar;
+	if(optionContinuar == 1){
+		limpiar();
+		return true;
+	} 
+	limpiar();
+	return false;
+}
+
