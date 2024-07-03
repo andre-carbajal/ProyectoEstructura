@@ -2,6 +2,8 @@
 #include "Inventario.h"
 #include <iostream>
 #include <cstdlib>
+#include <stdio.h>
+#include <windows.h>
 
 using namespace std;
 
@@ -11,6 +13,10 @@ void limpiar() {
 #else
     system("clear");
 #endif
+}
+
+void retrasar(){
+    Sleep(1500);
 }
 
 int menulogin() {
@@ -43,11 +49,12 @@ int menuinvs() {
 int menuusos() {
     int option;
     cout << "MENU" << endl;
-    cout << "1) Insertar" << endl;
-    cout << "2) Buscar" << endl;
-    cout << "3) Actualizar" << endl;
-    cout << "4) Eliminar" << endl;
-    cout << "5) Regresar" << endl;
+    cout << "1) Mostrar" << endl;
+    cout << "2) Insertar" << endl;
+    cout << "3) Buscar" << endl;
+    cout << "4) Actualizar" << endl;
+    cout << "5) Eliminar" << endl;
+    cout << "6) Regresar" << endl;
     cout << "Ingrese una opción: ";
     cin >> option;
 
@@ -65,6 +72,8 @@ void accionesBebidas(int opcionUsos,Bebida bebidas[]){
 		case 4:
 			break;
 		case 5:
+			break;
+		case 6:
 			break;
 		default:
             cout << "Opción invalida" << endl;
@@ -84,6 +93,8 @@ void accionesSnacks(int opcionUsos,Snack snaks[]){
 			break;
 		case 5:
 			break;
+		case 6:
+			break;
 		default:
             cout << "Opción invalida" << endl;
             break;
@@ -101,6 +112,8 @@ void accionesAbarrotes(int opcionUsos,Abarrote abarrotes[]){
 		case 4:
 			break;
 		case 5:
+			break;
+		case 6:
 			break;
 		default:
             cout << "Opción invalida" << endl;

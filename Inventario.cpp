@@ -8,7 +8,7 @@ using namespace std;
 void mostrarBebidas(Bebida bebidas[], int nBebidas){
 }
 
-void mostrarSnaks(Snack snacks[], int nSnacks){
+void mostrarSnacks(Snack snacks[], int nSnacks){
 	
 }
 
@@ -21,7 +21,7 @@ void insertarBebidas(Bebida bebidas[], int nBebidas){
 	
 }
 
-void insertarSnaks(Snack snacks[], int nSnacks){
+void insertarSnacks(Snack snacks[], int nSnacks){
 	
 }
 
@@ -34,7 +34,7 @@ void buscarBebidas(Bebida bebidas[], int nBebidas){
 	
 }
 
-void buscarSnaks(Snack snacks[], int nSnacks){
+void buscarSnacks(Snack snacks[], int nSnacks){
 	
 }
 
@@ -47,7 +47,7 @@ void actualizarBebidas(Bebida bebidas[], int nBebidas){
 	
 }
 
-void actualizarSnaks(Snack snacks[], int nSnacks){
+void actualizarSnacks(Snack snacks[], int nSnacks){
 	
 }
 
@@ -60,7 +60,7 @@ void eliminarBebida(Bebida bebidas[], int nBebidas){
 	
 }
 
-void eliminarSnak(Snack snacks[], int nSnacks){
+void eliminarSnack(Snack snacks[], int nSnacks){
 	
 }
 

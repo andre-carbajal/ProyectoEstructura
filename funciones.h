@@ -4,6 +4,7 @@
 #include "Inventario.h"
 
 void limpiar();
+void retrasar();
 int menulogin();
 int menuinvs();
 int menuusos();

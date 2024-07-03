@@ -8,6 +8,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Spanish");
+    system("COLOR F1");
     
     Bebida bebidas[999];
     Snack snacks[999];
@@ -21,8 +22,8 @@ int main() {
 
     string usuario, contrasena;
 
-    int opcionLogin, opcionInv, opcionUsos;
-    bool encontrado;
+    int opcionLogin, opcionInv, opcionUsos, usu;
+    bool continuarInv, continuarMenu;
     int maxintentos = 3;
     int intentos = 0;
     
@@ -30,46 +31,52 @@ int main() {
 
     do {
         opcionLogin = menulogin();
-
+        limpiar();
         switch (opcionLogin) {
             case 1:
-                encontrado = loginUsuario(usuarios, usuario, contrasena, nPersonas);
-
-                if (encontrado) {
+                usu = loginUsuario(usuarios, usuario, contrasena, nPersonas);
+                limpiar();
+                if (usu != -1 && (usuarios[usu].role == 1 || usuarios[usu].role == 0)){
                     intentos = 0;
 
                     system("title Sistema integrado");
-                    limpiar();
+                    
+                    do{
+                    	opcionInv = menuinvs();
 
-                    opcionInv = menuinvs();
-
-                    limpiar();
-
-                    switch (opcionInv) {
-                        case 1:
-                            system("title Bebidas");
-                            opcionUsos = menuusos();
-                            limpiar();
-                            accionesBebidas(opcionInv, bebidas);
-                            break;
-                        case 2:
-                            system("title Snacks");
-                            opcionUsos = menuusos();
-                            limpiar();
-                            accionesSnacks(opcionInv, snacks);
-                            break;
-                        case 3:
-                            system("title Abarrotes");
-                            opcionUsos = menuusos();
-                            limpiar();
-                            accionesAbarrotes(opcionInv, abarrotes);
-                            break;
-                        case 4:
-                            break;
-                        default:
-                            cout << "Opción invalida" << endl;
-                            break;
-                    }
+	                    limpiar();
+	
+	                    switch (opcionInv) {
+	                        case 1:
+	                            system("title Bebidas");
+	                            opcionUsos = menuusos();
+	                            limpiar();
+	                            accionesBebidas(opcionInv, bebidas);
+	                            continuarInv = true;
+	                            break;
+	                        case 2:
+	                            system("title Snacks");
+	                            opcionUsos = menuusos();
+	                            limpiar();
+	                            accionesSnacks(opcionInv, snacks);
+	                            continuarInv = true;
+	                            break;
+	                        case 3:
+	                            system("title Abarrotes");
+	                            opcionUsos = menuusos();
+	                            limpiar();
+	                            accionesAbarrotes(opcionInv, abarrotes);
+	                            continuarInv = true;
+	                            break;
+	                        case 4:
+	                            continuarInv = false;
+	                            break;
+	                        default:
+	                            cout << "Opción invalida" << endl;
+	                            break;
+	                    }
+					}while(continuarInv);
+                    
                 } else {
                     limpiar();
                     intentos++;
