@@ -33,7 +33,7 @@ void mostrarSnacks(Snack snacks[], int nSnacks);
 void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes);
 
 //insertar 
-void insertarBebida(Bebida bebidas[], int nBebidas);
+int insertarBebida(Bebida bebidas[], int nBebidas);
 void insertarSnack(Snack snacks[], int nSnacks);
 void insertarAbarrote(Abarrote abarrotes[], int nAbarrotes);
 

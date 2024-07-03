@@ -6,11 +6,11 @@ using namespace std;
 
 //mostrar 
 void mostrarBebidas(Bebida bebidas[], int nBebidas){
-		cout<<"ID     ";
-		cout<<"NOMBRE     ";
-		cout<<"COSTO     ";
-		cout<<"CANTIDAD     ";
-		cout<<"CAPACIDAD (ml)"<<endl;
+	cout<<"ID     ";
+	cout<<"NOMBRE     ";
+	cout<<"COSTO     ";
+	cout<<"CANTIDAD     ";
+	cout<<"CAPACIDAD (ml)"<<endl;
 	for (int i=0; i<nBebidas; i++){
 		cout<<bebidas[i].ID<<"     ";
 		cout<<bebidas[i].nombre<<"     ";
@@ -21,10 +21,10 @@ void mostrarBebidas(Bebida bebidas[], int nBebidas){
 }
 
 void mostrarSnacks(Snack snacks[], int nSnacks){
-		cout<<"ID     ";
-		cout<<"NOMBRE     ";
-		cout<<"COSTO     ";
-		cout<<"CANTIDAD     "<<endl;
+	cout<<"ID     ";
+	cout<<"NOMBRE     ";
+	cout<<"COSTO     ";
+	cout<<"CANTIDAD     "<<endl;
 	for (int i=0; i<nSnacks; i++){
 		cout<<snacks[i].ID<<"     ";
 		cout<<snacks[i].nombre<<"     ";
@@ -35,10 +35,10 @@ void mostrarSnacks(Snack snacks[], int nSnacks){
 }
 
 void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
-		cout<<"ID     ";
-		cout<<"NOMBRE     ";
-		cout<<"COSTO     ";
-		cout<<"CANTIDAD     "<<endl;
+	cout<<"ID     ";
+	cout<<"NOMBRE     ";
+	cout<<"COSTO     ";
+	cout<<"CANTIDAD     "<<endl;
 	for (int i=0; i<nAbarrotes; i++){
 		cout<<abarrotes[i].ID<<"     ";
 		cout<<abarrotes[i].nombre<<"     ";
@@ -49,7 +49,7 @@ void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
 }
 
 //insertar 
-void insertarBebida(Bebida bebidas[], int nBebidas){
+int insertarBebida(Bebida bebidas[], int nBebidas){
 	int opcion;
 	bool continuar;
 	do{
@@ -78,6 +78,7 @@ void insertarBebida(Bebida bebidas[], int nBebidas){
 			limpiar();
 		}
 	}while(continuar);
+	return nBebidas;
 }
 
 void insertarSnack(Snack snacks[], int nSnacks){

@@ -60,7 +60,7 @@ int main() {
 											continuarMenu = true;
 											break;
 										case 2:
-											insertarBebida(bebidas, nBebidas);
+											nBebidas = insertarBebida(bebidas, nBebidas);
 											continuarMenu = true;
 											break;
 										case 3:
