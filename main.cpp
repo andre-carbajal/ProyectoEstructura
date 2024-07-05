@@ -9,8 +9,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "es_ES.UTF-8");
-    // Cambia la codificación de la consola a UTF-8
-    system("chcp 65001");
+    system("chcp 65001 > null");
     system("COLOR F1");
     
     Bebida bebidas[999];

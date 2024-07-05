@@ -23,7 +23,7 @@ void initUsuarios(Persona personas[]) {
 
 int loginUsuario(Persona usuarios[], string usuario, string contrasena, int nUsuarios) {
     system("title Login");
-    cout << "?Recuerda que tienes 3 intentos!" << endl;
+    cout << "¡Recuerda que tienes 3 intentos!" << endl;
     cout << "Ingresa tu nombre de usuario: ";
     cin >> usuario;
     cout << "Ingresa tu contraseña: ";

@@ -48,7 +48,7 @@ int menuinvs() {
 
 int menuusos() {
     int option;
-    cout << "MENU" << endl;
+    cout << "MENÚ" << endl;
     cout << "1) Mostrar" << endl;
     cout << "2) Insertar" << endl;
     cout << "3) Buscar" << endl;
@@ -63,8 +63,8 @@ int menuusos() {
 
 bool continuar(){
 	int optionContinuar;
-	cout<<"?Desea modificar otro producto?"<<endl;
-	cout<<"1) S?"<<endl;
+	cout<<"¿Desea modificar otro producto?"<<endl;
+	cout<<"1) Sí"<<endl;
 	cout<<"2) No"<<endl;
 	cout<<"Ingresa tu opción: ";
 	cin>>optionContinuar;

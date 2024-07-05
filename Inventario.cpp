@@ -63,10 +63,10 @@ int insertarBebida(Bebida bebidas[], int nBebidas){
 		cin>>bebidas[nBebidas].ml;
 		limpiar();
 		nBebidas++;
-		cout<<"?Desea agregar otro producto?"<<endl;
-		cout<<"1) S?"<<endl;
+		cout<<"¿Desea agregar otro producto?"<<endl;
+		cout<<"1) Sí"<<endl;
 		cout<<"2) No"<<endl;
-		cout<<"Ingresa tu opci?n: ";
+		cout<<"Ingresa tu opción: ";
 		cin>>opcion;
 		if(opcion == 1){
 			continuar = true;
@@ -93,10 +93,10 @@ void insertarSnack(Snack snacks[], int nSnacks){
 		cin>>snacks[nSnacks].cantidad;
 		limpiar();
 		nSnacks++;
-		cout<<"?Desea agregar otro producto?"<<endl;
-		cout<<"1) S?"<<endl;
+		cout<<"¿Desea agregar otro producto?"<<endl;
+		cout<<"1) Sí"<<endl;
 		cout<<"2) No"<<endl;
-		cout<<"Ingresa tu opci?n: ";
+		cout<<"Ingresa tu opción: ";
 		cin>>option;
 		if(option == 1){
 			continuar = true;
@@ -122,10 +122,10 @@ void insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 		cin>>abarrotes[nAbarrotes].cantidad;
 		limpiar();
 		nAbarrotes++;
-		cout<<"?Desea agregar otro producto?"<<endl;
-		cout<<"1) S?"<<endl;
+		cout<<"¿Desea agregar otro producto?"<<endl;
+		cout<<"1) Sí"<<endl;
 		cout<<"2) No"<<endl;
-		cout<<"Ingresa tu opci?n: ";
+		cout<<"Ingresa tu opción: ";
 		cin>>option;
 		if(option == 1){
 			continuar = true;
