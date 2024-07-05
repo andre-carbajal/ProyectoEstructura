@@ -45,7 +45,6 @@ int main() {
                     
                     do{
                     	opcionInv = menuinvs();
-
 	                    limpiar();
 	
 	                    switch (opcionInv) {
@@ -66,6 +65,7 @@ int main() {
 											continuarMenu = true;
 											break;
 										case 3:
+											ordenamientoBebidas(bebidas, nBebidas);
 											buscarBebidas(bebidas, nBebidas);
 											continuarMenu = true;
 											break;
@@ -75,6 +75,7 @@ int main() {
 											break;
 										case 5:
 											nBebidas = eliminarBebida(bebidas, nBebidas);
+											ordenamientoBebidas(bebidas, nBebidas);
 											continuarMenu = true;
 											break;
 										case 6:
@@ -82,6 +83,7 @@ int main() {
 											break;
 										default:
 								            cout << "Opción invalida" << endl;
+								            continuarMenu = false;
 								            break;
 										}
 								}while(continuarMenu);
@@ -92,16 +94,20 @@ int main() {
 	                            opcionUsos = menuusos();
 	                            limpiar();
 	                            do{
+	                            	opcionUsos = menuusos();
+	                            	limpiar();
+	                            	
 									switch(opcionUsos){
 										case 1:
 											mostrarSnacks(snacks, nSnacks);
 											continuarMenu = true;
 											break;
 										case 2:
-											insertarSnack(snacks, nSnacks);
+											nSnacks = insertarSnack(snacks, nSnacks);
 											continuarMenu = true;
 											break;
 										case 3:
+											ordenamientoSnacks(snacks, nSnacks);
 											buscarSnacks(snacks, nSnacks);
 											continuarMenu = true;
 											break;
@@ -110,7 +116,8 @@ int main() {
 											continuarMenu = true;
 											break;
 										case 5:
-											nBebidas = eliminarSnack(snacks, nSnacks);
+											nSnacks = eliminarSnack(snacks, nSnacks);
+											ordenamientoSnacks(snacks, nSnacks);
 											continuarMenu = true;
 											break;
 										case 6:
@@ -118,6 +125,7 @@ int main() {
 											break;
 										default:
 								            cout << "Opción invalida" << endl;
+								            continuarMenu = false;
 								            break;
 									}
 								}while(continuarMenu);
@@ -128,16 +136,20 @@ int main() {
 	                            opcionUsos = menuusos();
 	                            limpiar();
 	                            do{
+	                            	opcionUsos = menuusos();
+	                            	limpiar();
+	                            	
 									switch(opcionUsos){
 										case 1:
 											mostrarAbarrotes(abarrotes, nAbarrotes);
 											continuarMenu = true;
 											break;
 										case 2:
-											insertarAbarrote(abarrotes, nAbarrotes);
+											nAbarrotes = insertarAbarrote(abarrotes, nAbarrotes);
 											continuarMenu = true;
 											break;
 										case 3:
+											ordenamientoAbarrotes(abarrotes, nAbarrotes);
 											buscarAbarrotes(abarrotes, nAbarrotes);
 											continuarMenu = true;
 											break;
@@ -146,14 +158,15 @@ int main() {
 											continuarMenu = true;
 											break;
 										case 5:
-											nBebidas = eliminarAbarrote(abarrotes, nAbarrotes);
+											nAbarrotes = eliminarAbarrote(abarrotes, nAbarrotes);
+											ordenamientoAbarrotes(abarrotes, nAbarrotes);
 											continuarMenu = true;
-											break;
 										case 6:
 											continuarMenu = false;
 											break;
 										default:
 								            cout << "Opción invalida" << endl;
+								            continuarMenu = false;
 								            break;
 									}
 								}while(continuarMenu);
@@ -163,6 +176,7 @@ int main() {
 	                            break;
 	                        default:
 	                            cout << "Opción invalida" << endl;
+	                            continuarMenu = false;
 	                            break;
 	                    }
 					}while(continuarInv);
@@ -194,4 +208,3 @@ int main() {
 
     return 0;
 }
-
