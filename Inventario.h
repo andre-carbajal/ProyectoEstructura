@@ -34,8 +34,8 @@ void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes);
 
 //insertar 
 int insertarBebida(Bebida bebidas[], int nBebidas);
-void insertarSnack(Snack snacks[], int nSnacks);
-void insertarAbarrote(Abarrote abarrotes[], int nAbarrotes);
+int insertarSnack(Snack snacks[], int nSnacks);
+int insertarAbarrote(Abarrote abarrotes[], int nAbarrotes);
 
 //buscar
 void buscarBebidas(Bebida bebidas[], int nBebidas);
@@ -53,6 +53,11 @@ int eliminarSnack(Snack snacks[], int nSnacks);
 int eliminarAbarrote(Abarrote abarrotes[], int nAbarrotes);
 
 bool continuarModificar();
+
+//ordenamiento
+void ordenamientoBebidas(Bebida bebidas[], int nBebidas);
+void ordenamientoSnacks(Snack snacks[], int nSnacks);
+void ordenamientoAbarrotes(Abarrote abarrotes[], int nAbarrotes);
 
 #endif //PROYECTOESTRUCTURA_INVENTARIO_H
 

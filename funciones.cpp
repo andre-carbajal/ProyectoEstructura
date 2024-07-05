@@ -16,7 +16,7 @@ void limpiar() {
 }
 
 void retrasar(){
-    sleep(1500);
+    sleep(2);
 }
 
 int menulogin() {

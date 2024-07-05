@@ -78,7 +78,7 @@ int insertarBebida(Bebida bebidas[], int nBebidas){
 	return nBebidas;
 }
 
-void insertarSnack(Snack snacks[], int nSnacks){
+int insertarSnack(Snack snacks[], int nSnacks){
 	int option;
 	bool continuar;
 	do{
@@ -104,9 +104,10 @@ void insertarSnack(Snack snacks[], int nSnacks){
 			limpiar();
 		}
 	}while(continuar);
+	return nSnacks;
 }
 
-void insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
+int insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 	int option;
 	bool continuar;
 	do{
@@ -132,6 +133,7 @@ void insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 			limpiar();
 		}
 	}while(continuar);
+	return nAbarrotes;
 }
 
 //buscar
@@ -339,5 +341,41 @@ bool continuarModificar(){
 	} 
 	limpiar();
 	return false;
+}
+
+void ordenamientoBebidas(Bebida bebidas[], int nBebidas) {
+    for (int i = 0; i < nBebidas - 1; i++) {
+        for (int j = 0; j < nBebidas - i - 1; j++) {
+            if (bebidas[j].ID > bebidas[j + 1].ID) {
+                Bebida temp = bebidas[j];
+                bebidas[j] = bebidas[j + 1];
+                bebidas[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void ordenamientoSnacks(Snack snacks[], int nSnacks) {
+    for (int i = 0; i < nSnacks - 1; i++) {
+        for (int j = 0; j < nSnacks - i - 1; j++) {
+            if (snacks[j].ID > snacks[j + 1].ID) {
+                Snack temp = snacks[j];
+                snacks[j] = snacks[j + 1];
+                snacks[j + 1] = temp;
+            }
+        }
+    }
+}
+
+void ordenamientoAbarrotes(Abarrote abarrotes[], int nAbarrotes) {
+    for (int i = 0; i < nAbarrotes - 1; i++) {
+        for (int j = 0; j < nAbarrotes - i - 1; j++) {
+            if (abarrotes[j].ID > abarrotes[j + 1].ID) {
+                Abarrote temp = abarrotes[j];
+                abarrotes[j] = abarrotes[j + 1];
+                abarrotes[j + 1] = temp;
+            }
+        }
+    }
 }
 
