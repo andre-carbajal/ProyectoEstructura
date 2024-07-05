@@ -48,9 +48,9 @@ void actualizarSnack(Snack snacks[], int nSnacks);
 void actualizarAbarrote(Abarrote abarrotes[], int nAbarrotes);
 
 //eliminar
-void eliminarBebida(Bebida bebidas[], int nBebidas);
-void eliminarSnack(Snack snacks[], int nSnacks);
-void eliminarAbarrote(Abarrote abarrotes[], int nAbarrotes);
+int eliminarBebida(Bebida bebidas[], int nBebidas);
+int eliminarSnack(Snack snacks[], int nSnacks);
+int eliminarAbarrote(Abarrote abarrotes[], int nAbarrotes);
 
 bool continuarModificar();
 

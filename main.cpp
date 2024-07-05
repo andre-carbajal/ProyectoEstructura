@@ -75,7 +75,7 @@ int main() {
 											continuarMenu = true;
 											break;
 										case 5:
-											eliminarBebida(bebidas, nBebidas);
+											nBebidas = eliminarBebida(bebidas, nBebidas);
 											continuarMenu = true;
 											break;
 										case 6:
@@ -111,7 +111,7 @@ int main() {
 											continuarMenu = true;
 											break;
 										case 5:
-											eliminarSnack(snacks, nSnacks);
+											nBebidas = eliminarSnack(snacks, nSnacks);
 											continuarMenu = true;
 											break;
 										case 6:
@@ -147,7 +147,7 @@ int main() {
 											continuarMenu = true;
 											break;
 										case 5:
-											eliminarAbarrote(abarrotes, nAbarrotes);
+											nBebidas = eliminarAbarrote(abarrotes, nAbarrotes);
 											continuarMenu = true;
 											break;
 										case 6:

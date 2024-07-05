@@ -281,16 +281,52 @@ void actualizarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 }
 
 //eliminar
-void eliminarBebida(Bebida bebidas[], int nBebidas){
-	
+int eliminarBebida(Bebida bebidas[], int nBebidas) {
+    int ID;
+    cout << "Ingrese el ID del producto a eliminar: ";
+    cin >> ID;
+    for (int i = 0; i < nBebidas; ++i) {
+        if (bebidas[i].ID == ID) {
+            bebidas[i] = bebidas[nBebidas - 1];
+            nBebidas--;
+            cout << "Producto eliminado." << endl;
+            return nBebidas;
+        }
+    }
+    cout << "Producto no encontrado." << endl;
+    return nBebidas;
 }
 
-void eliminarSnack(Snack snacks[], int nSnacks){
-	
+int eliminarSnack(Snack snacks[], int nSnacks) {
+    int ID;
+    cout << "Ingrese el ID del producto a eliminar: ";
+    cin >> ID;
+    for (int i = 0; i < nSnacks; ++i) {
+        if (snacks[i].ID == ID) {
+            snacks[i] = snacks[nSnacks - 1];
+            nSnacks--;
+            cout << "Producto eliminado." << endl;
+            return nSnacks;
+        }
+    }
+    cout << "Producto no encontrado." << endl;
+    return nSnacks;
 }
 
-void eliminarAbarrote(Abarrote abarrotes[], int nAbarrotes){
-	
+int eliminarAbarrote(Abarrote abarrotes[], int nAbarrotes) {
+    int ID;
+    cout << "Ingrese el ID del producto a eliminar: ";
+    cin >> ID;
+    for (int i = 0; i < nAbarrotes; ++i) {
+        if (abarrotes[i].ID == ID) {
+            abarrotes[i] = abarrotes[nAbarrotes - 1];
+            nAbarrotes--;
+            cout << "Producto eliminado." << endl;
+            return nAbarrotes;
+        }
+    }
+    cout << "Producto no encontrado." << endl;
+    return nAbarrotes;
 }
 
 bool continuarModificar(){
