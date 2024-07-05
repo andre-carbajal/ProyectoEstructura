@@ -16,7 +16,7 @@ void limpiar() {
 }
 
 void retrasar(){
-    Sleep(1500);
+    sleep(1500);
 }
 
 int menulogin() {
@@ -25,7 +25,7 @@ int menulogin() {
     cout << "1. Iniciar sesion" << endl;
     cout << "2. Registrar nuevo usuario" << endl;
     cout << "3. Salir" << endl;
-    cout << "Ingrese una opci髇 : ";
+    cout << "Ingrese una opci贸n : ";
     cin >> option;
 
     return option;
@@ -39,7 +39,7 @@ int menuinvs() {
     cout << "2) Snacks" << endl;
     cout << "3) Abarrotes" << endl;
     cout << "4) Regresar" << endl;
-    cout << "Ingrese una opci髇: ";
+    cout << "Ingrese una opci贸n: ";
     
     cin >> option;
 
@@ -55,7 +55,7 @@ int menuusos() {
     cout << "4) Actualizar" << endl;
     cout << "5) Eliminar" << endl;
     cout << "6) Regresar" << endl;
-    cout << "Ingrese una opci髇: ";
+    cout << "Ingrese una opci贸n: ";
     cin >> option;
 
     return option;
@@ -66,7 +66,7 @@ bool continuar(){
 	cout<<"?Desea modificar otro producto?"<<endl;
 	cout<<"1) S?"<<endl;
 	cout<<"2) No"<<endl;
-	cout<<"Ingresa tu opci?n: ";
+	cout<<"Ingresa tu opci贸n: ";
 	cin>>optionContinuar;
 	if(optionContinuar == 1){
 		limpiar();
@@ -75,4 +75,3 @@ bool continuar(){
 	limpiar();
 	return false;
 }
-

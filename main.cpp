@@ -1,5 +1,6 @@
 #include <iostream>
-#include <locale>
+#include <locale.h>
+#include <wchar.h>
 #include "Persona.h"
 #include "funciones.h"
 #include "Inventario.h"
@@ -7,7 +8,9 @@
 using namespace std;
 
 int main() {
-    setlocale(LC_ALL, "Spanish");
+    setlocale(LC_ALL, "es_ES.UTF-8");
+    // Cambia la codificaci贸n de la consola a UTF-8
+    system("chcp 65001");
     system("COLOR F1");
     
     Bebida bebidas[999];
@@ -79,7 +82,7 @@ int main() {
 											continuarMenu = false;
 											break;
 										default:
-								            cout << "Opci髇 invalida" << endl;
+								            cout << "Opci贸n invalida" << endl;
 								            break;
 										}
 								}while(continuarMenu);
@@ -115,7 +118,7 @@ int main() {
 											continuarMenu = false;
 											break;
 										default:
-								            cout << "Opci髇 invalida" << endl;
+								            cout << "Opci贸n invalida" << endl;
 								            break;
 									}
 								}while(continuarMenu);
@@ -151,7 +154,7 @@ int main() {
 											continuarMenu = false;
 											break;
 										default:
-								            cout << "Opci髇 invalida" << endl;
+								            cout << "Opci贸n invalida" << endl;
 								            break;
 									}
 								}while(continuarMenu);
@@ -160,7 +163,7 @@ int main() {
 	                            continuarInv = false;
 	                            break;
 	                        default:
-	                            cout << "Opci髇 invalida" << endl;
+	                            cout << "Opci贸n invalida" << endl;
 	                            break;
 	                    }
 					}while(continuarInv);
@@ -185,7 +188,7 @@ int main() {
 
             default:
                 limpiar();
-                cout << "Opci髇 invalida" << endl;
+                cout << "Opci?n invalida" << endl;
                 break;
         }
     } while (intentos < maxintentos);

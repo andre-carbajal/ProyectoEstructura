@@ -23,10 +23,10 @@ void initUsuarios(Persona personas[]) {
 
 int loginUsuario(Persona usuarios[], string usuario, string contrasena, int nUsuarios) {
     system("title Login");
-    cout << "¡Recuerda que tienes 3 intentos!" << endl;
+    cout << "?Recuerda que tienes 3 intentos!" << endl;
     cout << "Ingresa tu nombre de usuario: ";
     cin >> usuario;
-    cout << "Ingresa tu contraseña: ";
+    cout << "Ingresa tu contraseÃ±a: ";
     cin >> contrasena;
     for (int i = 0; i < nUsuarios; i++) {
         if (usuarios[i].usuario == usuario && usuarios[i].contrasena == contrasena) {
@@ -41,7 +41,7 @@ int registrarUsuario(Persona personas[], int nPersonas){
 	system("title Nuevo Usuario");
 	cout << "Ingrese el usuario: ";
 	cin >> personas[nPersonas].usuario;
-	cout << "Ingrese la contraseña: ";
+	cout << "Ingrese la contraseÃ±a: ";
 	cin >> personas[nPersonas].contrasena;
 	personas[nPersonas].role = 1;
 	return nPersonas+1;
