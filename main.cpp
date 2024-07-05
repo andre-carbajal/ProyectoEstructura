@@ -187,7 +187,7 @@ int main() {
 
             default:
                 limpiar();
-                cout << "Opci?n invalida" << endl;
+                cout << "Opción invalida" << endl;
                 break;
         }
     } while (intentos < maxintentos);

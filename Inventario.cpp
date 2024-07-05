@@ -51,8 +51,7 @@ int insertarBebida(Bebida bebidas[], int nBebidas){
 	int opcion;
 	bool continuar;
 	do{
-		cout<<"Ingresa ID del producto:"<<endl;
-		cin>>bebidas[nBebidas].ID;
+		bebidas[nBebidas].ID = nBebidas;
 		cout<<"Ingresa nombre del producto: "<<endl;
 		cin>>bebidas[nBebidas].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
@@ -83,8 +82,7 @@ void insertarSnack(Snack snacks[], int nSnacks){
 	int option;
 	bool continuar;
 	do{
-		cout<<"Ingresa ID del producto:"<<endl;
-		cin>>snacks[nSnacks].ID;
+		snacks[nSnacks].ID = nSnacks;
 		cout<<"Ingresa nombre del producto: "<<endl;
 		cin>>snacks[nSnacks].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
@@ -112,8 +110,7 @@ void insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 	int option;
 	bool continuar;
 	do{
-		cout<<"Ingresa ID del producto:"<<endl;
-		cin>>abarrotes[nAbarrotes].ID;
+		abarrotes[nAbarrotes].ID = nAbarrotes;
 		cout<<"Ingresa nombre del producto: "<<endl;
 		cin>>abarrotes[nAbarrotes].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
