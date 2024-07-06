@@ -7,7 +7,7 @@ using namespace std;
 
 struct Bebida{
 	int ID;
-	string nombre;
+	char nombre[100];
 	float costo;
 	int cantidad;
 	int ml;
@@ -15,14 +15,14 @@ struct Bebida{
 
 struct Snack{
 	int ID;
-	string nombre;
+	char nombre[100];
 	float costo;
 	int cantidad;
 };
 
 struct Abarrote{
 	int ID;
-	string nombre;
+	char nombre[100];
 	float costo;
 	int cantidad;
 };

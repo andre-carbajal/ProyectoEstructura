@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 #include "Inventario.h"
 #include "funciones.h"
 
@@ -53,7 +54,7 @@ int insertarBebida(Bebida bebidas[], int nBebidas){
 	do{
 		bebidas[nBebidas].ID = nBebidas;
 		cout<<"Ingresa nombre del producto: "<<endl;
-		cin>>bebidas[nBebidas].nombre;
+		cin >> bebidas[nBebidas].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
 		cin>>bebidas[nBebidas].costo;
 		cout<<"Ingresa la cantidad del producto:"<<endl;
@@ -84,7 +85,7 @@ int insertarSnack(Snack snacks[], int nSnacks){
 	do{
 		snacks[nSnacks].ID = nSnacks;
 		cout<<"Ingresa nombre del producto: "<<endl;
-		cin>>snacks[nSnacks].nombre;
+		cin >> snacks[nSnacks].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
 		cin>>snacks[nSnacks].costo;
 		cout<<"Ingresa la cantidad del producto:"<<endl;
@@ -113,7 +114,7 @@ int insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 	do{
 		abarrotes[nAbarrotes].ID = nAbarrotes;
 		cout<<"Ingresa nombre del producto: "<<endl;
-		cin>>abarrotes[nAbarrotes].nombre;
+		cin >> abarrotes[nAbarrotes].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
 		cin>>abarrotes[nAbarrotes].costo;
 		cout<<"Ingresa la cantidad del producto:"<<endl;

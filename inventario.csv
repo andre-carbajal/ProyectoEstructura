@@ -1,0 +1,11 @@
+Inventario de Sistema Integrado;;;;
+;;;;
+Bebidas;;;;
+ID;nombre;costo;cantidad;ml
+0;coca;52.00;5000;1
+;;;;
+Snacks;;;;
+ID;nombre;costo;cantidad
+;;;;
+Abarrotes;;;;
+ID;nombre;costo;cantidad

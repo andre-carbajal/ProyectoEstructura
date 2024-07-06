@@ -38,7 +38,7 @@ int menuinvs() {
     cout << "1) Bebidas" << endl;
     cout << "2) Snacks" << endl;
     cout << "3) Abarrotes" << endl;
-    cout << "4) Regresar" << endl;
+    cout << "4) Guardar y salir" << endl;
     cout << "Ingrese una opción: ";
     
     cin >> option;
@@ -74,4 +74,38 @@ bool continuar(){
 	} 
 	limpiar();
 	return false;
+}
+
+void guardar(Bebida bebidas[], int nBebidas, Snack snacks[], int nSnacks, Abarrote abarrotes[], int nAbarrotes){
+	FILE *inventario;
+	
+	inventario = fopen("inventario.csv", "w");
+	
+	fprintf(inventario, "%s\n", "Inventario de Sistema Integrado;;;;");
+	fprintf(inventario, "%s\n", ";;;;");
+	
+	fprintf(inventario, "%s\n", "Bebidas;;;;");
+	fprintf(inventario, "%s\n", "ID;nombre;costo;cantidad;ml");
+	for(int i = 0; i<nBebidas; i++){
+		fprintf(inventario, "%d;%s;%.2f;%d;%d\n",
+		bebidas[i].ID, bebidas[i].nombre, bebidas[i].costo, bebidas[i].cantidad, bebidas[i].ml);
+	}
+	fprintf(inventario, "%s\n", ";;;;");
+	
+	fprintf(inventario, "%s\n", "Snacks;;;;");
+	fprintf(inventario, "%s\n", "ID;nombre;costo;cantidad");
+	for(int i = 0; i<nSnacks; i++){
+		fprintf(inventario, "%d;%s;%.2f;%d;%d\n",
+		snacks[i].ID, snacks[i].nombre, snacks[i].costo, snacks[i].cantidad);
+	}
+	fprintf(inventario, "%s\n", ";;;;");
+	
+	fprintf(inventario, "%s\n", "Abarrotes;;;;");
+	fprintf(inventario, "%s\n", "ID;nombre;costo;cantidad");
+	for(int i = 0; i<nAbarrotes; i++){
+		fprintf(inventario, "%d;%s;%.2f;%d;%d\n",
+		abarrotes[i].ID, abarrotes[i].nombre, abarrotes[i].costo, abarrotes[i].cantidad);
+	}
+	
+	fclose(inventario);
 }
