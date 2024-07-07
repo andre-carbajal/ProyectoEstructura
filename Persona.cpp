@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <conio.h>
 #include "Persona.h"
 
 using namespace std;
@@ -21,20 +23,43 @@ void initUsuarios(Persona personas[]) {
     personas[4].role = 0;
 }
 
-int loginUsuario(Persona usuarios[], string usuario, string contrasena, int nUsuarios) {
-    system("title Login");
-    cout << "¡Recuerda que tienes 3 intentos!" << endl;
-    cout << "Ingresa tu nombre de usuario: ";
-    cin >> usuario;
-    cout << "Ingresa tu contraseña: ";
-    cin >> contrasena;
-    for (int i = 0; i < nUsuarios; i++) {
-        if (usuarios[i].usuario == usuario && usuarios[i].contrasena == contrasena) {
-            return i;
-        }
-    }
-    return -1;
+string ocultarcontrasena(){
+	string contrasenaTemporal;
+	char caracter;
+	do {
+		caracter = _getch();
+	    if (caracter == 13) {
+	      break;
+	    } else if (caracter == 8){
+	    	if(!contrasenaTemporal.empty()){
+	    		contrasenaTemporal.pop_back();
+	    		cout << "\b \b";
+			}
+		} else {
+			contrasenaTemporal += caracter;
+			cout << "*";
+		}
+	} while (true);
+	return contrasenaTemporal;
 }
+
+int loginUsuario(Persona usuarios[], string usuario, string contrasena, int nUsuarios) {
+	system("title Login");
+	cout << "¡Recuerda que tienes 3 intentos!" << endl;
+	cout << "Ingresa tu nombre de usuario: ";
+	cin >> usuario;
+
+	cout << "Ingresa tu contraseña: ";
+	contrasena = ocultarcontrasena();
+	
+	for (int i = 0; i < nUsuarios; i++) {
+		if (usuarios[i].usuario == usuario && usuarios[i].contrasena == contrasena) {
+		    return i;
+		}
+	}
+	return -1;
+}
+
 
 
 int registrarUsuario(Persona personas[], int nPersonas){
@@ -42,7 +67,7 @@ int registrarUsuario(Persona personas[], int nPersonas){
 	cout << "Ingrese el usuario: ";
 	cin >> personas[nPersonas].usuario;
 	cout << "Ingrese la contraseña: ";
-	cin >> personas[nPersonas].contrasena;
+	personas[nPersonas].contrasena = ocultarcontrasena();
 	personas[nPersonas].role = 1;
 	return nPersonas+1;
 }

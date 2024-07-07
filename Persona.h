@@ -10,6 +10,7 @@ struct Persona {
 };
 
 void initUsuarios(Persona personas[]);
+string ocultarcontrasena();
 int loginUsuario(Persona personas[], string usuario, string contrasena, int nPersonas);
 int registrarUsuario(Persona personas[], int nPersonas);
 
