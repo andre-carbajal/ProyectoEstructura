@@ -196,7 +196,7 @@ int main(){
 							
 							break;
 						case 4:
-							guardar(bebidas, nBebidas, snacks, nSnacks, abarrotes, nAbarrotes);
+							guardarInventario(bebidas, nBebidas, snacks, nSnacks, abarrotes, nAbarrotes);
 							continuarInv = false;
 							break;
 						default:
