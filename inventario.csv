@@ -2,7 +2,7 @@ Inventario de Sistema Integrado;;;;
 ;;;;
 Bebidas;;;;
 ID;nombre;costo;cantidad;ml
-0;Coa-Cola;1.50;100;500
+0;Coa-Cola;1.50;51;500
 1;Pepsi;1.45;80;500
 2;Fanta;1.40;60;500
 3;Sprite;1.30;90;500
