@@ -6,6 +6,75 @@
 using namespace std;
 
 //mostrar 
+int initBebidas(struct Bebida bebidas[], int nBebidas, FILE *inventario) {
+    char linea[5000];
+    
+    while (fgets(linea, sizeof(linea), inventario) && strcmp(linea, ";;;;\n") != 0) {
+    	if (strncmp(linea, "ID", 2) == 0) {
+            continue;
+        }
+        char *token = strtok(linea, ";");
+        if (token != nullptr) {
+            bebidas[nBebidas].ID = nBebidas;
+            token = strtok(nullptr, ";");
+            strcpy(bebidas[nBebidas].nombre, token);
+            token = strtok(nullptr, ";");
+            bebidas[nBebidas].costo = atof(token);
+            token = strtok(nullptr, ";");
+            bebidas[nBebidas].cantidad = atoi(token);
+            token = strtok(nullptr, ";");
+            bebidas[nBebidas].ml = atoi(token);
+            nBebidas++; 
+        }
+    }
+    return nBebidas;
+}
+
+int initSnacks(struct Snack snacks[], int nSnacks, FILE *inventario) {
+    char linea[5000];
+
+    while (fgets(linea, sizeof(linea), inventario) && strcmp(linea, ";;;;\n") != 0) {
+    	if (strncmp(linea, "ID", 2) == 0) {
+        	continue;
+    	}
+	    char *token = strtok(linea, ";");
+	    if (token != nullptr) {
+	        snacks[nSnacks].ID = nSnacks;
+	        token = strtok(nullptr, ";");
+	        strcpy(snacks[nSnacks].nombre, token);
+	        token = strtok(nullptr, ";");
+	        snacks[nSnacks].costo = atof(token);
+	        token = strtok(nullptr, ";");
+	        snacks[nSnacks].cantidad = atoi(token);
+	        nSnacks++;
+	    }
+    }
+    return nSnacks;
+}
+
+int initAbarrotes(struct Abarrote abarrotes[], int nAbarrotes, FILE *inventario) {
+    char linea[5000];
+
+    while (fgets(linea, sizeof(linea), inventario) && strcmp(linea, ";;;;\n") != 0) {
+    	if (strncmp(linea, "ID", 2) == 0) {
+        	continue;
+    	}
+        char *token = strtok(linea, ";");
+        if (token != nullptr) {
+            abarrotes[nAbarrotes].ID = nAbarrotes;
+            token = strtok(nullptr, ";");
+            strcpy(abarrotes[nAbarrotes].nombre, token);
+            token = strtok(nullptr, ";");
+            abarrotes[nAbarrotes].costo = atof(token);
+            token = strtok(nullptr, ";");
+            abarrotes[nAbarrotes].cantidad = atoi(token);
+            nAbarrotes++;
+        }
+    }
+    return nAbarrotes;
+}
+
+//mostrar 
 void mostrarBebidas(Bebida bebidas[], int nBebidas){
 	cout<<"ID     ";
 	cout<<"NOMBRE     ";

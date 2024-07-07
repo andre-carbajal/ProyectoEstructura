@@ -30,6 +30,27 @@ int main(){
 	int intentos = 0;
 
 	initUsuarios(usuarios);
+	
+	FILE *inventario = fopen("inventario.csv", "r");
+    if (!inventario) {
+        cout<<"No se encontro el archivo"<<endl;
+    }
+    
+    char linea[5000];
+    
+    while (fgets(linea, sizeof(linea), inventario)) {
+    	if (strcmp(linea, "Bebidas;;;;\n") == 0) {
+            nBebidas = initBebidas(bebidas, nBebidas, inventario);
+        } else if (strcmp(linea, "Snacks;;;;\n") == 0) {
+            nSnacks = initSnacks(snacks, nSnacks, inventario);
+        } else if (strcmp(linea, "Abarrotes;;;;\n") == 0) {
+            nAbarrotes = initAbarrotes(abarrotes, nAbarrotes, inventario);
+        }
+	}
+	
+	fclose(inventario);
+	
+	//limpiar();
 
 	do{
 		opcionLogin = menulogin();

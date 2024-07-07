@@ -27,6 +27,10 @@ struct Abarrote{
 	int cantidad;
 };
 
+int initBebidas(Bebida bebidas[], int nBebidas, FILE *inventario);
+int initSnacks(Snack snacks[], int nSnacks, FILE *inventario);
+int initAbarrotes(Abarrote abarrotes[], int nAbarrotes, FILE *inventario);
+
 //mostrar 
 void mostrarBebidas(Bebida bebidas[], int nBebidas);
 void mostrarSnacks(Snack snacks[], int nSnacks);
