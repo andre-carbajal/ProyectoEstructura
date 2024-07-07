@@ -11,4 +11,3 @@ int menuusos();
 bool continuar();
 
 #endif //PROYECTOESTRUCTURA_FUNCIONES_H
-

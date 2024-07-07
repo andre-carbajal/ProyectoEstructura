@@ -50,8 +50,6 @@ int main(){
 	
 	fclose(inventario);
 	
-	//limpiar();
-
 	do{
 		opcionLogin = menulogin();
 		limpiar();

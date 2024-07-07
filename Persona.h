@@ -16,4 +16,3 @@ int loginUsuario(Persona personas[], string usuario, string contrasena, int nPer
 int registrarUsuario(Persona personas[], int nPersonas);
 
 #endif //PROYECTOESTRUCTURA_PERSONA_H
-

@@ -66,4 +66,3 @@ void ordenamientoAbarrotes(Abarrote abarrotes[], int nAbarrotes);
 void guardarInventario(Bebida bebidas[], int nBebidas, Snack snacks[], int nSnacks, Abarrote abarrotes[], int nAbarrotes);
 
 #endif //PROYECTOESTRUCTURA_INVENTARIO_H
-
