@@ -1,9 +1,5 @@
 #include "funciones.h"
-#include "Inventario.h"
 #include <iostream>
-#include <cstdlib>
-#include <stdio.h>
-#include <windows.h>
 
 using namespace std;
 
@@ -16,7 +12,7 @@ void limpiar() {
 }
 
 void retrasar(){
-    sleep(2);
+    sleep(1);
 }
 
 int menulogin() {

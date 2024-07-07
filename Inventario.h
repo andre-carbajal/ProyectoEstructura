@@ -1,8 +1,6 @@
 #ifndef PROYECTOESTRUCTURA_INVENTARIO_H
 #define PROYECTOESTRUCTURA_INVENTARIO_H
 
-#include <string>
-
 using namespace std;
 
 struct Bebida{

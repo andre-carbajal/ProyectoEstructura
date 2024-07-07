@@ -1,8 +1,6 @@
 #ifndef PROYECTOESTRUCTURA_PERSONA_H
 #define PROYECTOESTRUCTURA_PERSONA_H
 
-#include <string>
-
 using namespace std;
 
 struct Persona {
