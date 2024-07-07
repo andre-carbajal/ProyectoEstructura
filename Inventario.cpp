@@ -207,16 +207,105 @@ int insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 }
 
 //buscar
-void buscarBebidas(Bebida bebidas[], int nBebidas){
-	
+void buscarBebidas(Bebida bebidas[], int nBebidas) {
+    int ID, inicio = 0, fin = nBebidas - 1;
+    bool encontrado = false;
+    
+    cout << "Digite ID del producto que desea buscar: ";
+    cin >> ID;
+    
+    while (inicio <= fin) {
+        int medio = inicio + (fin - inicio) / 2;
+        
+        if (bebidas[medio].ID == ID) {
+            cout << "ID     ";
+            cout << "NOMBRE     ";
+            cout << "COSTO     ";
+            cout << "CANTIDAD     ";
+            cout << "CAPACIDAD (ml)" << endl;
+            cout << bebidas[medio].ID << "     ";
+            cout << bebidas[medio].nombre << "     ";
+            cout << bebidas[medio].costo << "     ";
+            cout << bebidas[medio].cantidad << "     ";
+            cout << bebidas[medio].ml << endl;
+            encontrado = true;
+            break;
+        } else if (bebidas[medio].ID < ID) {
+            inicio = medio + 1;
+        } else {
+            fin = medio - 1;
+        }
+    }
+    
+    if (!encontrado) {
+        cout << "No se encontro el elemento" << endl;
+    }
 }
 
 void buscarSnacks(Snack snacks[], int nSnacks){
-	
+	int ID, inicio = 0, fin = nSnacks - 1;
+    bool encontrado = false;
+    
+    cout << "Digite ID del producto que desea buscar: ";
+    cin >> ID;
+    
+    while (inicio <= fin) {
+        int medio = inicio + (fin - inicio) / 2;
+        
+        if (snacks[medio].ID == ID) {
+            cout << "ID     ";
+            cout << "NOMBRE     ";
+            cout << "COSTO     ";
+            cout << "CANTIDAD"<< endl;
+            cout << snacks[medio].ID << "     ";
+            cout << snacks[medio].nombre << "     ";
+            cout << snacks[medio].costo << "     ";
+            cout << snacks[medio].cantidad << endl;
+            encontrado = true;
+            break;
+        } else if (snacks[medio].ID < ID) {
+            inicio = medio + 1;
+        } else {
+            fin = medio - 1;
+        }
+    }
+    
+    if (!encontrado) {
+        cout << "No se encontro el elemento" << endl;
+    }
 }
 
 void buscarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
-	
+	int ID, inicio = 0, fin = nAbarrotes - 1;
+    bool encontrado = false;
+    
+    cout << "Digite ID del producto que desea buscar: ";
+    cin >> ID;
+    
+    while (inicio <= fin) {
+        int medio = inicio + (fin - inicio) / 2;
+        
+        if (abarrotes[medio].ID == ID) {
+            cout << "ID     ";
+            cout << "NOMBRE     ";
+            cout << "COSTO     ";
+            cout << "CANTIDAD"<< endl;
+            cout << abarrotes[medio].ID << "     ";
+            cout << abarrotes[medio].nombre << "     ";
+            cout << abarrotes[medio].costo << "     ";
+            cout << abarrotes[medio].cantidad << endl;
+            encontrado = true;
+            break;
+        } else if (abarrotes[medio].ID < ID) {
+            inicio = medio + 1;
+        } else {
+            fin = medio - 1;
+        }
+    }
+    
+    if (!encontrado) {
+        cout << "No se encontro el elemento" << endl;
+    }
 }
 
 //actualizar
@@ -448,4 +537,3 @@ void ordenamientoAbarrotes(Abarrote abarrotes[], int nAbarrotes) {
         }
     }
 }
-
