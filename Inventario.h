@@ -25,9 +25,9 @@ struct Abarrote{
 	int cantidad;
 };
 
-int initBebidas(Bebida bebidas[], int nBebidas, FILE *inventario);
-int initSnacks(Snack snacks[], int nSnacks, FILE *inventario);
-int initAbarrotes(Abarrote abarrotes[], int nAbarrotes, FILE *inventario);
+pair<int, int> initBebidas(Bebida bebidas[], int nBebidas, int idMaxBebidas, FILE *inventario);
+pair<int, int> initSnacks(Snack snacks[], int nSnacks, int idMaxSnacks, FILE *inventario);
+pair<int, int> initAbarrotes(Abarrote abarrotes[], int nAbarrotes, int idMaxAbarrotes, FILE *inventario);
 
 //mostrar 
 void mostrarBebidas(Bebida bebidas[], int nBebidas);
@@ -35,9 +35,9 @@ void mostrarSnacks(Snack snacks[], int nSnacks);
 void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes);
 
 //insertar 
-int insertarBebida(Bebida bebidas[], int nBebidas);
-int insertarSnack(Snack snacks[], int nSnacks);
-int insertarAbarrote(Abarrote abarrotes[], int nAbarrotes);
+pair<int, int> insertarBebida(Bebida bebidas[], int nBebidas, int idMaxBebidas);
+pair<int, int> insertarSnack(Snack snacks[], int nSnacks, int idMaxSnacks);
+pair<int, int> insertarAbarrote(Abarrote abarrotes[], int nAbarrotes, int idMaxAbarrotes);
 
 //buscar
 void buscarBebidas(Bebida bebidas[], int nBebidas);

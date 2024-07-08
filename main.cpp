@@ -16,8 +16,11 @@ int main(){
 	Snack snacks[999];
 	Abarrote abarrotes[999];
 	int nBebidas = 0;
+	int idMaxBebidas = 0;
 	int nSnacks = 0;
+	int idMaxSnacks = 0;
 	int nAbarrotes = 0;
+	int idMaxAbarrotes = 0;
 
 	Persona usuarios[999];
 	int nPersonas = 5;
@@ -31,6 +34,8 @@ int main(){
 
 	initUsuarios(usuarios);
 	
+	pair<int, int> resultInit;
+	
 	FILE *inventario = fopen("inventario.csv", "r");
     if (!inventario) {
         cout<<"No se encontro el archivo"<<endl;
@@ -40,11 +45,17 @@ int main(){
     
     while (fgets(linea, sizeof(linea), inventario)) {
     	if (strcmp(linea, "Bebidas;;;;\n") == 0) {
-            nBebidas = initBebidas(bebidas, nBebidas, inventario);
+    		resultInit = initBebidas(bebidas, nBebidas, idMaxBebidas, inventario);
+            nBebidas = resultInit.first;
+            idMaxBebidas = resultInit.second;
         } else if (strcmp(linea, "Snacks;;;;\n") == 0) {
-            nSnacks = initSnacks(snacks, nSnacks, inventario);
+        	resultInit = initSnacks(snacks, nSnacks, idMaxSnacks, inventario);
+            nSnacks = resultInit.first;
+            idMaxSnacks = resultInit.second;
         } else if (strcmp(linea, "Abarrotes;;;;\n") == 0) {
-            nAbarrotes = initAbarrotes(abarrotes, nAbarrotes, inventario);
+        	resultInit = initAbarrotes(abarrotes, nAbarrotes, idMaxAbarrotes, inventario);
+            nAbarrotes = resultInit.first;
+            idMaxAbarrotes = resultInit.second;
         }
 	}
 	
@@ -66,6 +77,8 @@ int main(){
 					opcionInv = menuinvs();
 					limpiar();
 					
+					pair<int, int> resultInsertar;
+					
 					switch (opcionInv){
 						case 1:
 							continuarInv = true;
@@ -81,7 +94,9 @@ int main(){
 										continuarMenu = true;
 										break;
 									case 2:
-										nBebidas = insertarBebida(bebidas, nBebidas);
+										resultInsertar = insertarBebida(bebidas, nBebidas, idMaxBebidas);
+										nBebidas = resultInsertar.first;
+										idMaxBebidas = resultInsertar.second;
 										continuarMenu = true;
 										break;
 									case 3:
@@ -123,7 +138,9 @@ int main(){
 										continuarMenu = true;
 										break;
 									case 2:
-										nSnacks = insertarSnack(snacks, nSnacks);
+										resultInsertar = insertarSnack(snacks, nSnacks, idMaxSnacks);
+										nSnacks = resultInsertar.first;
+										idMaxSnacks = resultInsertar.second;
 										continuarMenu = true;
 										break;
 									case 3:
@@ -165,7 +182,9 @@ int main(){
 										continuarMenu = true;
 										break;
 									case 2:
-										nAbarrotes = insertarAbarrote(abarrotes, nAbarrotes);
+										resultInsertar = insertarAbarrote(abarrotes, nAbarrotes, idMaxAbarrotes);
+										nAbarrotes = resultInsertar.first;
+										idMaxAbarrotes = resultInsertar.second;
 										continuarMenu = true;
 										break;
 									case 3:

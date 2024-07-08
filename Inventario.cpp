@@ -6,7 +6,7 @@
 using namespace std;
 
 //init 
-int initBebidas(struct Bebida bebidas[], int nBebidas, FILE *inventario) {
+pair<int, int> initBebidas(struct Bebida bebidas[], int nBebidas, int idMaxBebidas, FILE *inventario) {
     char linea[5000];
     
     while (fgets(linea, sizeof(linea), inventario) && strcmp(linea, ";;;;\n") != 0) {
@@ -15,7 +15,8 @@ int initBebidas(struct Bebida bebidas[], int nBebidas, FILE *inventario) {
         }
         char *token = strtok(linea, ";");
         if (token != nullptr) {
-            bebidas[nBebidas].ID = nBebidas;
+        	int currentID = atoi(token);
+            bebidas[nBebidas].ID = currentID;
             token = strtok(nullptr, ";");
             strcpy(bebidas[nBebidas].nombre, token);
             token = strtok(nullptr, ";");
@@ -25,12 +26,16 @@ int initBebidas(struct Bebida bebidas[], int nBebidas, FILE *inventario) {
             token = strtok(nullptr, ";");
             bebidas[nBebidas].ml = atoi(token);
             nBebidas++; 
+            
+            if (currentID > idMaxBebidas) {
+                idMaxBebidas = currentID;
+            }
         }
     }
-    return nBebidas;
+    return make_pair(nBebidas, idMaxBebidas);
 }
 
-int initSnacks(struct Snack snacks[], int nSnacks, FILE *inventario) {
+pair<int, int> initSnacks(struct Snack snacks[], int nSnacks, int idMaxSnacks, FILE *inventario) {
     char linea[5000];
 
     while (fgets(linea, sizeof(linea), inventario) && strcmp(linea, ";;;;\n") != 0) {
@@ -39,7 +44,8 @@ int initSnacks(struct Snack snacks[], int nSnacks, FILE *inventario) {
     	}
 	    char *token = strtok(linea, ";");
 	    if (token != nullptr) {
-	        snacks[nSnacks].ID = nSnacks;
+	    	int currentID = atoi(token);
+	        snacks[nSnacks].ID = currentID;
 	        token = strtok(nullptr, ";");
 	        strcpy(snacks[nSnacks].nombre, token);
 	        token = strtok(nullptr, ";");
@@ -47,12 +53,16 @@ int initSnacks(struct Snack snacks[], int nSnacks, FILE *inventario) {
 	        token = strtok(nullptr, ";");
 	        snacks[nSnacks].cantidad = atoi(token);
 	        nSnacks++;
+	        
+	        if (currentID > idMaxSnacks) {
+                idMaxSnacks = currentID;
+            }
 	    }
     }
-    return nSnacks;
+    return make_pair(nSnacks, idMaxSnacks);
 }
 
-int initAbarrotes(struct Abarrote abarrotes[], int nAbarrotes, FILE *inventario) {
+pair<int, int> initAbarrotes(struct Abarrote abarrotes[], int nAbarrotes, int idMaxAbarrotes, FILE *inventario) {
     char linea[5000];
 
     while (fgets(linea, sizeof(linea), inventario) && strcmp(linea, ";;;;\n") != 0) {
@@ -61,7 +71,8 @@ int initAbarrotes(struct Abarrote abarrotes[], int nAbarrotes, FILE *inventario)
     	}
         char *token = strtok(linea, ";");
         if (token != nullptr) {
-            abarrotes[nAbarrotes].ID = nAbarrotes;
+        	int currentID = atoi(token);
+            abarrotes[nAbarrotes].ID = currentID;
             token = strtok(nullptr, ";");
             strcpy(abarrotes[nAbarrotes].nombre, token);
             token = strtok(nullptr, ";");
@@ -69,9 +80,13 @@ int initAbarrotes(struct Abarrote abarrotes[], int nAbarrotes, FILE *inventario)
             token = strtok(nullptr, ";");
             abarrotes[nAbarrotes].cantidad = atoi(token);
             nAbarrotes++;
+            
+            if (currentID > idMaxAbarrotes) {
+                idMaxAbarrotes = currentID;
+            }
         }
     }
-    return nAbarrotes;
+    return make_pair(nAbarrotes, idMaxAbarrotes);
 }
 
 //mostrar 
@@ -117,11 +132,11 @@ void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
 }
 
 //insertar 
-int insertarBebida(Bebida bebidas[], int nBebidas){
+pair<int, int> insertarBebida(Bebida bebidas[], int nBebidas, int idMaxBebidas){
 	int opcion;
 	bool continuar;
 	do{
-		bebidas[nBebidas].ID = nBebidas;
+		bebidas[nBebidas].ID = idMaxBebidas + 1;
 		cout<<"Ingresa nombre del producto: "<<endl;
 		cin >> bebidas[nBebidas].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
@@ -132,6 +147,7 @@ int insertarBebida(Bebida bebidas[], int nBebidas){
 		cin>>bebidas[nBebidas].ml;
 		limpiar();
 		nBebidas++;
+		idMaxBebidas++;
 		cout<<"¿Desea agregar otro producto?"<<endl;
 		cout<<"1) Sí"<<endl;
 		cout<<"2) No"<<endl;
@@ -145,14 +161,14 @@ int insertarBebida(Bebida bebidas[], int nBebidas){
 			limpiar();
 		}
 	}while(continuar);
-	return nBebidas;
+	return make_pair(nBebidas, idMaxBebidas);
 }
 
-int insertarSnack(Snack snacks[], int nSnacks){
+pair<int, int> insertarSnack(Snack snacks[], int nSnacks, int idMaxSnacks){
 	int option;
 	bool continuar;
 	do{
-		snacks[nSnacks].ID = nSnacks;
+		snacks[nSnacks].ID = idMaxSnacks + 1;
 		cout<<"Ingresa nombre del producto: "<<endl;
 		cin >> snacks[nSnacks].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
@@ -161,6 +177,7 @@ int insertarSnack(Snack snacks[], int nSnacks){
 		cin>>snacks[nSnacks].cantidad;
 		limpiar();
 		nSnacks++;
+		idMaxSnacks++;
 		cout<<"¿Desea agregar otro producto?"<<endl;
 		cout<<"1) Sí"<<endl;
 		cout<<"2) No"<<endl;
@@ -174,14 +191,14 @@ int insertarSnack(Snack snacks[], int nSnacks){
 			limpiar();
 		}
 	}while(continuar);
-	return nSnacks;
+	return make_pair(nSnacks, idMaxSnacks);
 }
 
-int insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
+pair<int, int> insertarAbarrote(Abarrote abarrotes[], int nAbarrotes, int idMaxAbarrotes){
 	int option;
 	bool continuar;
 	do{
-		abarrotes[nAbarrotes].ID = nAbarrotes;
+		abarrotes[nAbarrotes].ID = idMaxAbarrotes + 1;
 		cout<<"Ingresa nombre del producto: "<<endl;
 		cin >> abarrotes[nAbarrotes].nombre;
 		cout<<"Ingresa el costo del producto:"<<endl;
@@ -190,6 +207,7 @@ int insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 		cin>>abarrotes[nAbarrotes].cantidad;
 		limpiar();
 		nAbarrotes++;
+		idMaxAbarrotes++;
 		cout<<"¿Desea agregar otro producto?"<<endl;
 		cout<<"1) Sí"<<endl;
 		cout<<"2) No"<<endl;
@@ -203,7 +221,7 @@ int insertarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 			limpiar();
 		}
 	}while(continuar);
-	return nAbarrotes;
+	return make_pair(nAbarrotes, idMaxAbarrotes);
 }
 
 //buscar
