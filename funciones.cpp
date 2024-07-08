@@ -1,5 +1,7 @@
 #include "funciones.h"
 #include <iostream>
+#include <stdio.h>
+#include <windows.h>
 
 using namespace std;
 
@@ -70,4 +72,13 @@ bool continuar(){
 	} 
 	limpiar();
 	return false;
+}
+
+void gotoxy(int x, int y){
+	HANDLE Manipulador;
+	COORD Coordenadas;
+	Manipulador = GetStdHandle(STD_OUTPUT_HANDLE);
+	Coordenadas.X = x;  
+    Coordenadas.Y = y;
+	SetConsoleCursorPosition(Manipulador, Coordenadas);
 }
