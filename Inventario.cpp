@@ -103,6 +103,10 @@ void mostrarBebidas(Bebida bebidas[], int nBebidas){
 		cout<<bebidas[i].cantidad<<"     ";
 		cout<<bebidas[i].ml<<endl;
 	}
+	cout<<"Precione una tecla para continuar...";
+	cin.ignore();
+	cin.get();
+	limpiar();
 }
 
 void mostrarSnacks(Snack snacks[], int nSnacks){
@@ -116,6 +120,10 @@ void mostrarSnacks(Snack snacks[], int nSnacks){
 		cout<<snacks[i].costo<<"     ";
 		cout<<snacks[i].cantidad<<endl;
 	}
+	cout<<"Precione una tecla para continuar...";
+	cin.ignore();
+	cin.get();
+	limpiar();
 }
 
 void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
@@ -129,6 +137,10 @@ void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
 		cout<<abarrotes[i].costo<<"     ";
 		cout<<abarrotes[i].cantidad<<endl;
 	}
+	cout<<"Precione una tecla para continuar...";
+	cin.ignore();
+	cin.get();
+	limpiar();
 }
 
 //insertar 
