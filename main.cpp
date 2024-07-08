@@ -85,7 +85,12 @@ int main(){
 							system("title Bebidas");
 							
 							do{
-								opcionUsos = menuusos();
+								if(usuarios[usu].role == 0){
+									opcionUsos = menuusosAdm();
+								} else if (usuarios[usu].role == 1){
+									opcionUsos = menuusosEmp();
+								}
+									
 								limpiar();
 								
 								switch(opcionUsos){
@@ -129,7 +134,11 @@ int main(){
 							system("title Snacks");
 							
 							do{
-								opcionUsos = menuusos();
+								if(usuarios[usu].role == 0){
+									opcionUsos = menuusosAdm();
+								} else if (usuarios[usu].role == 1){
+									opcionUsos = menuusosEmp();
+								}
 								limpiar();
 								
 								switch(opcionUsos){
@@ -173,7 +182,11 @@ int main(){
 							system("title Abarrotes");
 							
 							do{
-								opcionUsos = menuusos();
+								if(usuarios[usu].role == 0){
+									opcionUsos = menuusosAdm();
+								} else if (usuarios[usu].role == 1){
+									opcionUsos = menuusosEmp();
+								}
 								limpiar();
 								
 								switch(opcionUsos){

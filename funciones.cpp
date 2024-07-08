@@ -44,7 +44,7 @@ int menuinvs() {
     return option;
 }
 
-int menuusos() {
+int menuusosAdm() {
     int option;
     cout << "MENÚ" << endl;
     cout << "1) Mostrar" << endl;
@@ -55,7 +55,26 @@ int menuusos() {
     cout << "6) Regresar" << endl;
     cout << "Ingrese una opción: ";
     cin >> option;
+    return option;
+}
 
+int menuusosEmp(){
+    int option;
+    cout << "MENÚ" << endl;
+    cout << "1) Mostrar" << endl;
+    cout << "2) Buscar" << endl;
+    cout << "3) Regresar" << endl;
+    cout << "Ingrese una opción: ";
+    cin >> option;
+    if(option == 1){
+    	option = 2;
+	} else if(option == 2){
+		option = 3;
+	} else if(option == 3){
+		option = 6;
+	} else {
+		option = 6;
+	}
     return option;
 }
 

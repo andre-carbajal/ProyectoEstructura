@@ -5,7 +5,8 @@ void limpiar();
 void retrasar();
 int menulogin();
 int menuinvs();
-int menuusos();
+int menuusosAdm();
+int menuusosEmp();
 bool continuar();
 void gotoxy(int x, int y);
 
