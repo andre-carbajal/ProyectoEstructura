@@ -138,7 +138,16 @@ pair<int, int> insertarBebida(Bebida bebidas[], int nBebidas, int idMaxBebidas){
 	do{
 		bebidas[nBebidas].ID = idMaxBebidas + 1;
 		cout<<"Ingresa nombre del producto: "<<endl;
-		cin >> bebidas[nBebidas].nombre;
+		
+		cin.ignore();
+        cin.getline(bebidas[nBebidas].nombre, 100);
+
+        for (int i = 0; i < strlen(bebidas[nBebidas].nombre); i++) {
+            if (bebidas[nBebidas].nombre[i] == ' ') {
+                bebidas[nBebidas].nombre[i] = '-';
+            }
+        }
+		
 		cout<<"Ingresa el costo del producto:"<<endl;
 		cin>>bebidas[nBebidas].costo;
 		cout<<"Ingresa la cantidad del producto:"<<endl;
@@ -170,7 +179,16 @@ pair<int, int> insertarSnack(Snack snacks[], int nSnacks, int idMaxSnacks){
 	do{
 		snacks[nSnacks].ID = idMaxSnacks + 1;
 		cout<<"Ingresa nombre del producto: "<<endl;
-		cin >> snacks[nSnacks].nombre;
+		
+		cin.ignore();
+		cin.getline(snacks[nSnacks].nombre, 100);
+
+        for (int i = 0; i < strlen(snacks[nSnacks].nombre); i++) {
+            if (snacks[nSnacks].nombre[i] == ' ') {
+                snacks[nSnacks].nombre[i] = '-';
+            }
+        }
+		
 		cout<<"Ingresa el costo del producto:"<<endl;
 		cin>>snacks[nSnacks].costo;
 		cout<<"Ingresa la cantidad del producto:"<<endl;
@@ -200,7 +218,16 @@ pair<int, int> insertarAbarrote(Abarrote abarrotes[], int nAbarrotes, int idMaxA
 	do{
 		abarrotes[nAbarrotes].ID = idMaxAbarrotes + 1;
 		cout<<"Ingresa nombre del producto: "<<endl;
-		cin >> abarrotes[nAbarrotes].nombre;
+		
+		cin.ignore();
+		cin.getline(abarrotes[nAbarrotes].nombre, 100);
+
+        for (int i = 0; i < strlen(abarrotes[nAbarrotes].nombre); i++) {
+            if (abarrotes[nAbarrotes].nombre[i] == ' ') {
+                abarrotes[nAbarrotes].nombre[i] = '-';
+            }
+        }
+		
 		cout<<"Ingresa el costo del producto:"<<endl;
 		cin>>abarrotes[nAbarrotes].costo;
 		cout<<"Ingresa la cantidad del producto:"<<endl;
