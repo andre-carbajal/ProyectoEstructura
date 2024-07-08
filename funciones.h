@@ -7,5 +7,6 @@ int menulogin();
 int menuinvs();
 int menuusos();
 bool continuar();
+void gotoxy(int x, int y);
 
 #endif //PROYECTOESTRUCTURA_FUNCIONES_H
