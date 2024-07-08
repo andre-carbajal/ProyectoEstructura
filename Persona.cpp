@@ -2,6 +2,7 @@
 #include <string>
 #include <conio.h>
 #include "Persona.h"
+#include "funciones.h"
 
 using namespace std;
 
@@ -45,10 +46,14 @@ string ocultarcontrasena(){
 
 int loginUsuario(Persona usuarios[], string usuario, string contrasena, int nUsuarios) {
 	system("title Login");
+	gotoxy(45,12);
 	cout << "¡Recuerda que tienes 3 intentos!" << endl;
+	gotoxy(40,13);
+	cout << "-----------------------------------------" <<endl;
+	gotoxy(42,14);
 	cout << "Ingresa tu nombre de usuario: ";
 	cin >> usuario;
-
+	gotoxy(42,15);
 	cout << "Ingresa tu contraseña: ";
 	contrasena = ocultarcontrasena();
 	

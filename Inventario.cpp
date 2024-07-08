@@ -137,7 +137,12 @@ pair<int, int> insertarBebida(Bebida bebidas[], int nBebidas, int idMaxBebidas){
 	bool continuar;
 	do{
 		bebidas[nBebidas].ID = idMaxBebidas + 1;
-		cout<<"Ingresa nombre del producto: "<<endl;
+		gotoxy(35,12);
+		cout << "--------------------------------------------------" <<endl;
+		gotoxy(35,17);
+		cout << "--------------------------------------------------" <<endl;
+		gotoxy(44,13);
+		cout<<"Ingresa nombre del producto: ";
 		
 		cin.ignore();
         cin.getline(bebidas[nBebidas].nombre, 100);
@@ -148,18 +153,25 @@ pair<int, int> insertarBebida(Bebida bebidas[], int nBebidas, int idMaxBebidas){
             }
         }
 		
-		cout<<"Ingresa el costo del producto:"<<endl;
+		gotoxy(43,14);
+		cout<<"Ingresa el costo del producto: ";
 		cin>>bebidas[nBebidas].costo;
-		cout<<"Ingresa la cantidad del producto:"<<endl;
+		gotoxy(42,15);
+		cout<<"Ingresa la cantidad del producto: ";
 		cin>>bebidas[nBebidas].cantidad;
-		cout<<"Capacidad en militros (ml) del producto:"<<endl;
+		gotoxy(38,16);
+		cout<<"Capacidad en militros (ml) del producto: ";
 		cin>>bebidas[nBebidas].ml;
 		limpiar();
 		nBebidas++;
 		idMaxBebidas++;
+		gotoxy(45,13);
 		cout<<"¿Desea agregar otro producto?"<<endl;
+		gotoxy(45,14);
 		cout<<"1) Sí"<<endl;
+		gotoxy(45,15);
 		cout<<"2) No"<<endl;
+		gotoxy(45,16);
 		cout<<"Ingresa tu opción: ";
 		cin>>opcion;
 		if(opcion == 1){
@@ -178,7 +190,12 @@ pair<int, int> insertarSnack(Snack snacks[], int nSnacks, int idMaxSnacks){
 	bool continuar;
 	do{
 		snacks[nSnacks].ID = idMaxSnacks + 1;
-		cout<<"Ingresa nombre del producto: "<<endl;
+		gotoxy(37,12);
+		cout << "----------------------------------------------" <<endl;
+		gotoxy(37,16);
+		cout << "----------------------------------------------" <<endl;
+		gotoxy(44,13);
+		cout<<"Ingresa nombre del producto: ";
 		
 		cin.ignore();
 		cin.getline(snacks[nSnacks].nombre, 100);
@@ -189,9 +206,11 @@ pair<int, int> insertarSnack(Snack snacks[], int nSnacks, int idMaxSnacks){
             }
         }
 		
-		cout<<"Ingresa el costo del producto:"<<endl;
+		gotoxy(43,14);
+		cout<<"Ingresa el costo del producto: ";
 		cin>>snacks[nSnacks].costo;
-		cout<<"Ingresa la cantidad del producto:"<<endl;
+		gotoxy(42,15);
+		cout<<"Ingresa la cantidad del producto: ";
 		cin>>snacks[nSnacks].cantidad;
 		limpiar();
 		nSnacks++;
@@ -217,7 +236,12 @@ pair<int, int> insertarAbarrote(Abarrote abarrotes[], int nAbarrotes, int idMaxA
 	bool continuar;
 	do{
 		abarrotes[nAbarrotes].ID = idMaxAbarrotes + 1;
-		cout<<"Ingresa nombre del producto: "<<endl;
+		gotoxy(37,12);
+		cout << "----------------------------------------------" <<endl;
+		gotoxy(37,16);
+		cout << "----------------------------------------------" <<endl;
+		gotoxy(44,13);
+		cout<<"Ingresa nombre del producto: ";
 		
 		cin.ignore();
 		cin.getline(abarrotes[nAbarrotes].nombre, 100);
@@ -228,9 +252,11 @@ pair<int, int> insertarAbarrote(Abarrote abarrotes[], int nAbarrotes, int idMaxA
             }
         }
 		
-		cout<<"Ingresa el costo del producto:"<<endl;
+		gotoxy(43,14);
+		cout<<"Ingresa el costo del producto:";
 		cin>>abarrotes[nAbarrotes].costo;
-		cout<<"Ingresa la cantidad del producto:"<<endl;
+		gotoxy(42,15);
+		cout<<"Ingresa la cantidad del producto:";
 		cin>>abarrotes[nAbarrotes].cantidad;
 		limpiar();
 		nAbarrotes++;

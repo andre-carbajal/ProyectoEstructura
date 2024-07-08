@@ -243,8 +243,12 @@ int main(){
 			}else{
 				limpiar();
 				intentos++;
+				gotoxy(42,12);
 				cout << "Usuario o contrasena incorrectos." << endl;
+				gotoxy(48,13);
 				cout << "Te quedan " << maxintentos - intentos << " intentos." << endl;
+				retrasar();
+				limpiar();
 			}
 			
 			break;
