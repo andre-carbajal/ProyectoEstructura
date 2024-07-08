@@ -37,9 +37,6 @@ int main(){
 	pair<int, int> resultInit;
 	
 	FILE *inventario = fopen("inventario.csv", "r");
-    if (!inventario) {
-        cout<<"No se encontro el archivo"<<endl;
-    }
     
     char linea[5000];
     
