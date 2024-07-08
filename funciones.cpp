@@ -7,11 +7,7 @@
 using namespace std;
 
 void limpiar() {
-#ifdef _WIN32
-    system("CLS");
-#else
-    system("clear");
-#endif
+	system("CLS");
 }
 
 void retrasar(){
