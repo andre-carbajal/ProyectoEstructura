@@ -311,6 +311,10 @@ void buscarBebidas(Bebida bebidas[], int nBebidas) {
             cout << bebidas[medio].costo << "     ";
             cout << bebidas[medio].cantidad << "     ";
             cout << bebidas[medio].ml << endl;
+            cout<<"Precione una tecla para continuar...";
+			cin.ignore();
+			cin.get();
+			limpiar();
             encontrado = true;
             break;
         } else if (bebidas[medio].ID < ID) {
@@ -344,6 +348,10 @@ void buscarSnacks(Snack snacks[], int nSnacks){
             cout << snacks[medio].nombre << "     ";
             cout << snacks[medio].costo << "     ";
             cout << snacks[medio].cantidad << endl;
+            cout<<"Precione una tecla para continuar...";
+			cin.ignore();
+			cin.get();
+			limpiar();
             encontrado = true;
             break;
         } else if (snacks[medio].ID < ID) {
@@ -377,6 +385,10 @@ void buscarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
             cout << abarrotes[medio].nombre << "     ";
             cout << abarrotes[medio].costo << "     ";
             cout << abarrotes[medio].cantidad << endl;
+            cout<<"Precione una tecla para continuar...";
+			cin.ignore();
+			cin.get();
+			limpiar();
             encontrado = true;
             break;
         } else if (abarrotes[medio].ID < ID) {
