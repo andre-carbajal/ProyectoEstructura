@@ -33,7 +33,6 @@ int menulogin() {
     cout << "3. Salir" << endl;
     cout << "Ingrese una opción : ";
     cin >> option;
-
     return option;
 }
 
@@ -46,9 +45,7 @@ int menuinvs() {
     cout << "3) Abarrotes" << endl;
     cout << "4) Guardar y salir" << endl;
     cout << "Ingrese una opción: ";
-    
     cin >> option;
-
     return option;
 }
 
