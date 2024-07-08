@@ -74,7 +74,7 @@ int main(){
 				system("title Sistema integrado");
 				
 				do{
-					opcionInv = menuinvs();
+					opcionInv = menuinvs(usuarios, usu);
 					limpiar();
 					
 					pair<int, int> resultInsertar;

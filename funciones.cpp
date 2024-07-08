@@ -45,10 +45,10 @@ int menulogin() {
     return option;
 }
 
-int menuinvs() {
+int menuinvs(Persona usuarios[], int numdUsu) {
 	int option;
 	gotoxy(56,10);
-    cout << "!BIENVENIDO!" << endl;
+    cout << "!BIENVENID@ " << usuarios[numdUsu].usuario << "!" << endl;
     gotoxy(32,11);
     cout << "------------------------------------------------------------" <<endl;
     gotoxy(34,12);
