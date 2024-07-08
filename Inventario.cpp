@@ -5,7 +5,7 @@
 
 using namespace std;
 
-//mostrar 
+//init 
 int initBebidas(struct Bebida bebidas[], int nBebidas, FILE *inventario) {
     char linea[5000];
     
