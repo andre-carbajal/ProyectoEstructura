@@ -67,7 +67,7 @@ int menuusosEmp(){
     cout << "Ingrese una opción: ";
     cin >> option;
     if(option == 1){
-    	option = 2;
+		option = 1;
 	} else if(option == 2){
 		option = 3;
 	} else if(option == 3){
