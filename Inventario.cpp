@@ -177,13 +177,17 @@ pair<int, int> insertarBebida(Bebida bebidas[], int nBebidas, int idMaxBebidas){
 		limpiar();
 		nBebidas++;
 		idMaxBebidas++;
-		gotoxy(45,13);
+		gotoxy(43,12);
+    	cout << "---------------------------------" <<endl;
+    	gotoxy(45,13);
 		cout<<"¿Desea agregar otro producto?"<<endl;
 		gotoxy(45,14);
 		cout<<"1) Sí"<<endl;
 		gotoxy(45,15);
 		cout<<"2) No"<<endl;
-		gotoxy(45,16);
+		gotoxy(43,16);
+    	cout << "---------------------------------" <<endl;
+		gotoxy(45,17);
 		cout<<"Ingresa tu opción: ";
 		cin>>opcion;
 		if(opcion == 1){
@@ -409,6 +413,11 @@ void actualizarBebida(Bebida bebidas[], int nBebidas){
     bool continuar, optinvalida, encontrado;
     do{
         encontrado = false;
+        gotoxy(38,13);
+    	cout << "----------------------------------------------------"<<endl;
+    	gotoxy(38,15);
+    	cout << "----------------------------------------------------" <<endl;
+    	gotoxy(41,14);
         cout << "Digite ID del producto que desea modificar: ";
         cin >> ID;
         for (int i = 0; i < nBebidas; i++) {
@@ -419,33 +428,54 @@ void actualizarBebida(Bebida bebidas[], int nBebidas){
             }
         }
         if (!encontrado) {
+        	gotoxy(55,16);
             cout << "¡ID no encontrado!" << endl;
             retrasar();
             limpiar();
             continuar = continuarModificar();
             continue;
         }
+        gotoxy(55,16);
         cout << "¡ID encontrado!" << endl;
         retrasar();
         limpiar();
         do {
+        	gotoxy(38,12);
+    		cout << "----------------------------------------------------"<<endl;
+    		gotoxy(42,13);
             cout << "¿Que desea modificar en " << bebidas[a].nombre << " de " << bebidas[a].ml << "ml? " << endl;
+            gotoxy(42,14);
             cout << "1) Costo" << endl;
+            gotoxy(42,15);
             cout << "2) Cantidad" << endl;
+            gotoxy(38,16);
+    		cout << "----------------------------------------------------" <<endl;
+    		gotoxy(42,17);
             cout << "Ingresa tu opción: ";
             cin >> option;
             limpiar();
             if (option == 1) {
-                cout << "Ingresa el nuevo costo del producto:" << endl;
+            	gotoxy(38,13);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(38,15);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(43,14);
+                cout << "Ingresa el nuevo costo del producto: ";
                 cin >> bebidas[a].costo;
                 optionContinuar = false;
                 limpiar();
             } else if (option == 2) {
-                cout << "Ingresa la nueva cantidad del producto:" << endl;
+            	gotoxy(38,13);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(38,15);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(43,14);
+                cout << "Ingresa la nueva cantidad del producto: ";
                 cin >> bebidas[a].cantidad;
                 optionContinuar = false;
                 limpiar();
             } else {
+            	gotoxy(45,14);
                 cout << "Opción inválida. Intente de nuevo." << endl;
                 optionContinuar = true;
                 retrasar();
@@ -462,6 +492,11 @@ void actualizarSnack(Snack snacks[], int nSnacks){
     bool continuar, optinvalida, encontrado;
     do{
         encontrado = false;
+        gotoxy(38,13);
+    	cout << "----------------------------------------------------"<<endl;
+    	gotoxy(38,15);
+    	cout << "----------------------------------------------------" <<endl;
+    	gotoxy(41,14);
         cout << "Digite ID del producto que desea modificar: ";
         cin >> ID;
         for (int i = 0; i < nSnacks; i++) {
@@ -472,33 +507,54 @@ void actualizarSnack(Snack snacks[], int nSnacks){
             }
         }
         if (!encontrado) {
+        	gotoxy(55,16);
             cout << "¡ID no encontrado!" << endl;
             retrasar();
             limpiar();
             continuar = continuarModificar();
             continue;
         }
+        gotoxy(55,16);
         cout << "¡ID encontrado!" << endl;
         retrasar();
         limpiar();
         do {
+        	gotoxy(38,12);
+    		cout << "-------------------------------------"<<endl;
+    		gotoxy(42,13);
             cout << "¿Que desea modificar en " << snacks[a].nombre << "? " << endl;
+            gotoxy(42,14);
             cout << "1) Costo" << endl;
+            gotoxy(42,15);
             cout << "2) Cantidad" << endl;
+            gotoxy(38,16);
+    		cout << "-------------------------------------" <<endl;
+    		gotoxy(42,17);
             cout << "Ingresa tu opción: ";
             cin >> option;
             limpiar();
             if (option == 1) {
+            	gotoxy(38,13);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(38,15);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(43,14);
                 cout << "Ingresa el nuevo costo del producto:" << endl;
                 cin >> snacks[a].costo;
                 optionContinuar = false;
                 limpiar();
             } else if (option == 2) {
+            	gotoxy(38,13);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(38,15);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(43,14);
                 cout << "Ingresa la nueva cantidad del producto:" << endl;
                 cin >> snacks[a].cantidad;
                 optionContinuar = false;
                 limpiar();
             } else {
+            	gotoxy(45,14);
                 cout << "Opción inválida. Intente de nuevo." << endl;
                 optionContinuar = true;
                 retrasar();
@@ -515,6 +571,11 @@ void actualizarAbarrote(Abarrote abarrotes[], int nAbarrotes){
     bool continuar, optinvalida, encontrado;
     do{
         encontrado = false;
+        gotoxy(38,13);
+    	cout << "----------------------------------------------------"<<endl;
+    	gotoxy(38,15);
+    	cout << "----------------------------------------------------" <<endl;
+    	gotoxy(41,14);
         cout << "Digite ID del producto que desea modificar: ";
         cin >> ID;
         for (int i = 0; i < nAbarrotes; i++) {
@@ -535,23 +596,42 @@ void actualizarAbarrote(Abarrote abarrotes[], int nAbarrotes){
         retrasar();
         limpiar();
         do {
+        	gotoxy(38,12);
+    		cout << "--------------------------------------"<<endl;
+    		gotoxy(42,13);
             cout << "¿Que desea modificar en " << abarrotes[a].nombre << "? " << endl;
+            gotoxy(42,14);
             cout << "1) Costo" << endl;
+            gotoxy(42,15);
             cout << "2) Cantidad" << endl;
+            gotoxy(38,16);
+    		cout << "-------------------------------------" <<endl;
+    		gotoxy(42,17);
             cout << "Ingresa tu opción: ";
             cin >> option;
             limpiar();
             if (option == 1) {
+            	gotoxy(38,13);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(38,15);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(43,14);
                 cout << "Ingresa el nuevo costo del producto:" << endl;
                 cin >> abarrotes[a].costo;
                 optionContinuar = false;
                 limpiar();
             } else if (option == 2) {
+            	gotoxy(38,13);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(38,15);
+    			cout << "-----------------------------------------------"<<endl;
+    			gotoxy(43,14);
                 cout << "Ingresa la nueva cantidad del producto:" << endl;
                 cin >> abarrotes[a].cantidad;
                 optionContinuar = false;
                 limpiar();
             } else {
+            	gotoxy(45,14);
                 cout << "Opción inválida. Intente de nuevo." << endl;
                 optionContinuar = true;
                 retrasar();
@@ -568,6 +648,11 @@ void actualizarAbarrote(Abarrote abarrotes[], int nAbarrotes){
 int eliminarBebida(Bebida bebidas[], int nBebidas) {
     int ID;
     bool encontrado = false;
+    gotoxy(39,14);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(39,16);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(41,15);
     cout << "Ingrese el ID del producto a eliminar: ";
     cin >> ID;
     for (int i = 0; i < nBebidas; ++i) {
@@ -575,12 +660,18 @@ int eliminarBebida(Bebida bebidas[], int nBebidas) {
             bebidas[i] = bebidas[nBebidas - 1];
             nBebidas--;
             encontrado = true;
+            gotoxy(50,17);
             cout << "Producto eliminado." << endl;
+            retrasar();
+        	limpiar();
             return nBebidas;
         }
     }
     if (!encontrado) {
+    	gotoxy(50,17);
         cout << "Producto no encontrado." << endl;
+        retrasar();
+        limpiar();
     }
     return nBebidas;
 }
@@ -588,6 +679,11 @@ int eliminarBebida(Bebida bebidas[], int nBebidas) {
 int eliminarSnack(Snack snacks[], int nSnacks) {
     int ID;
     bool encontrado = false;
+    gotoxy(39,14);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(39,16);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(41,15);
     cout << "Ingrese el ID del producto a eliminar: ";
     cin >> ID;
     for (int i = 0; i < nSnacks; ++i) {
@@ -595,11 +691,13 @@ int eliminarSnack(Snack snacks[], int nSnacks) {
             snacks[i] = snacks[nSnacks - 1];
             nSnacks--;
             encontrado = true;
+            gotoxy(50,17);
             cout << "Producto eliminado." << endl;
             return nSnacks;
         }
     }
     if (!encontrado) {
+    	gotoxy(50,17);
         cout << "Producto no encontrado." << endl;
     }
     return nSnacks;
@@ -608,6 +706,11 @@ int eliminarSnack(Snack snacks[], int nSnacks) {
 int eliminarAbarrote(Abarrote abarrotes[], int nAbarrotes) {
     int ID;
     bool encontrado = false;
+    gotoxy(39,14);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(39,16);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(41,15);
     cout << "Ingrese el ID del producto a eliminar: ";
     cin >> ID;
     for (int i = 0; i < nAbarrotes; ++i) {
@@ -615,11 +718,13 @@ int eliminarAbarrote(Abarrote abarrotes[], int nAbarrotes) {
             abarrotes[i] = abarrotes[nAbarrotes - 1];
             nAbarrotes--;
             encontrado = true;
+            gotoxy(50,17);
             cout << "Producto eliminado." << endl;
             return nAbarrotes;
         }
     }
     if (!encontrado) {
+    	gotoxy(50,17);
         cout << "Producto no encontrado." << endl;
     }
     return nAbarrotes;

@@ -98,10 +98,19 @@ int menuusosAdm() {
 
 int menuusosEmp(){
     int option;
+    gotoxy(58,11);
     cout << "MENÚ" << endl;
+    gotoxy(46,12);
+    cout << "---------------------------" <<endl;
+    gotoxy(50,13);
     cout << "1) Mostrar" << endl;
+    gotoxy(50,14);
     cout << "2) Buscar" << endl;
+    gotoxy(50,15);
     cout << "3) Regresar" << endl;
+    gotoxy(46,16);
+    cout << "---------------------------" <<endl;
+    gotoxy(50,17);
     cout << "Ingrese una opción: ";
     cin >> option;
     if(option == 1){

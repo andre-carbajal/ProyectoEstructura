@@ -69,8 +69,14 @@ int loginUsuario(Persona usuarios[], string usuario, string contrasena, int nUsu
 
 int registrarUsuario(Persona personas[], int nPersonas){
 	system("title Nuevo Usuario");
+	gotoxy(40,12);
+	cout << "------------------------------------" <<endl;
+	gotoxy(40,15);
+	cout << "------------------------------------" <<endl;
+	gotoxy(44,13);
 	cout << "Ingrese el usuario: ";
 	cin >> personas[nPersonas].usuario;
+	gotoxy(44,14);
 	cout << "Ingrese la contraseña: ";
 	personas[nPersonas].contrasena = ocultarcontrasena();
 	personas[nPersonas].role = 1;
