@@ -125,21 +125,6 @@ int menuusosEmp(){
     return option;
 }
 
-bool continuar(){
-	int optionContinuar;
-	cout<<"¿Desea modificar otro producto?"<<endl;
-	cout<<"1) Sí"<<endl;
-	cout<<"2) No"<<endl;
-	cout<<"Ingresa tu opción: ";
-	cin>>optionContinuar;
-	if(optionContinuar == 1){
-		limpiar();
-		return true;
-	} 
-	limpiar();
-	return false;
-}
-
 void gotoxy(int x, int y){
 	HANDLE Manipulador;
 	COORD Coordenadas;

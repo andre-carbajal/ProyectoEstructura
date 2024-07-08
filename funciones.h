@@ -10,7 +10,6 @@ int menulogin();
 int menuinvs(Persona usuarios[], int numdUsu);
 int menuusosAdm();
 int menuusosEmp();
-bool continuar();
 void gotoxy(int x, int y);
 
 #endif //PROYECTOESTRUCTURA_FUNCIONES_H
