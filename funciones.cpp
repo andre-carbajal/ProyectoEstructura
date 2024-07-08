@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <windows.h>
+#include <limits>
 
 using namespace std;
 
@@ -15,6 +16,17 @@ void limpiar() {
 
 void retrasar(){
     sleep(1);
+}
+
+void opcioninvalida(int opcion){
+	while(true){
+		if(cin.fail()){
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(),'\n');
+		}else{
+			break;
+		}
+	}
 }
 
 int menulogin() {

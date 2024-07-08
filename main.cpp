@@ -122,7 +122,8 @@ int main(){
 										continuarMenu = false;
 										break;
 									default:
-										cout << "Opción invalida" << endl;
+										opcioninvalida(opcionLogin);
+										cout<<"----------Opcion invalida---------"<<endl;
 										continuarMenu = true;
 										break;
 								}
@@ -170,7 +171,8 @@ int main(){
 										continuarMenu = false;
 										break;
 									default:
-										cout << "Opción invalida" << endl;
+										opcioninvalida(opcionLogin);
+										cout<<"----------Opcion invalida---------"<<endl;
 										continuarMenu = true;
 										break;
 								}
@@ -218,7 +220,8 @@ int main(){
 										continuarMenu = false;
 										break;
 									default:
-										cout << "Opción invalida" << endl;
+										opcioninvalida(opcionLogin);
+										cout<<"----------Opcion invalida---------"<<endl;
 										continuarMenu = true;
 										break;
 								}
@@ -230,7 +233,8 @@ int main(){
 							continuarInv = false;
 							break;
 						default:
-							cout << "Opción invalida" << endl;
+							opcioninvalida(opcionLogin);
+							cout<<"----------Opcion invalida---------"<<endl;
 							continuarInv = true;
 							break;
 					}
@@ -256,7 +260,8 @@ int main(){
 
 		default:
 			limpiar();
-			cout << "Opción invalida" << endl;
+			opcioninvalida(opcionLogin);
+			cout<<"----------Opcion invalida---------"<<endl;
 			break;
 		}
 	} while (intentos < maxintentos);

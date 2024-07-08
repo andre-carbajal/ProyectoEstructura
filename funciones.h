@@ -3,6 +3,7 @@
 
 void limpiar();
 void retrasar();
+void opcioninvalida(int opcion);
 int menulogin();
 int menuinvs();
 int menuusosAdm();
