@@ -800,7 +800,7 @@ void guardarInventario(Bebida bebidas[], int nBebidas, Snack snacks[], int nSnac
 	fprintf(inventario, "%s\n", "Snacks;;;;");
 	fprintf(inventario, "%s\n", "ID;nombre;costo;cantidad");
 	for(int i = 0; i<nSnacks; i++){
-		fprintf(inventario, "%d;%s;%.2f;%d;%d\n",
+		fprintf(inventario, "%d;%s;%.2f;%d\n",
 		snacks[i].ID, snacks[i].nombre, snacks[i].costo, snacks[i].cantidad);
 	}
 	fprintf(inventario, "%s\n", ";;;;");
@@ -808,7 +808,7 @@ void guardarInventario(Bebida bebidas[], int nBebidas, Snack snacks[], int nSnac
 	fprintf(inventario, "%s\n", "Abarrotes;;;;");
 	fprintf(inventario, "%s\n", "ID;nombre;costo;cantidad");
 	for(int i = 0; i<nAbarrotes; i++){
-		fprintf(inventario, "%d;%s;%.2f;%d;%d\n",
+		fprintf(inventario, "%d;%s;%.2f;%d\n",
 		abarrotes[i].ID, abarrotes[i].nombre, abarrotes[i].costo, abarrotes[i].cantidad);
 	}
 	
