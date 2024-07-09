@@ -26,7 +26,7 @@ void opcioninvalida(int opcion){
 }
 
 int menulogin() {
-    system("title Tiendita de don pepe");
+    system("title Inventario Cpp");
     int option;
     gotoxy(42,10);
     cout << "--------------------------------" <<endl;
