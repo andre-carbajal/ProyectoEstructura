@@ -67,7 +67,7 @@ int main(){
 			
 			if (usu != -1 && (usuarios[usu].role == 1 || usuarios[usu].role == 0)){
 				intentos = 0;
-				system("title Sistema integrado");
+				system("title Inventario Cpp");
 				
 				do{
 					opcionInv = menuinvs(usuarios, usu);
