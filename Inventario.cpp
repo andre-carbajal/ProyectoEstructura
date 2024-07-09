@@ -91,53 +91,94 @@ pair<int, int> initAbarrotes(struct Abarrote abarrotes[], int nAbarrotes, int id
 
 //mostrar 
 void mostrarBebidas(Bebida bebidas[], int nBebidas){
-	cout<<"ID     ";
-	cout<<"NOMBRE     ";
-	cout<<"COSTO     ";
-	cout<<"CANTIDAD     ";
+	gotoxy(30,2);
+	cout<<"ID";
+	gotoxy(38,2);
+	cout<<"NOMBRE";
+	gotoxy(50,2);
+	cout<<"COSTO";
+	gotoxy(61,2);
+	cout<<"CANTIDAD";
+	gotoxy(74,2);
 	cout<<"CAPACIDAD (ml)"<<endl;
+	gotoxy(28,3);
+	cout<<"--------------------------------------------------------------"<<endl;
 	for (int i=0; i<nBebidas; i++){
-		cout<<bebidas[i].ID<<"     ";
-		cout<<bebidas[i].nombre<<"     ";
-		cout<<bebidas[i].costo<<"     ";
-		cout<<bebidas[i].cantidad<<"     ";
-		cout<<bebidas[i].ml<<endl;
+		gotoxy(30,4+i);
+		cout<<bebidas[i].ID;
+		gotoxy(36,4+i);
+		cout<<bebidas[i].nombre;
+		gotoxy(50,4+i);
+		cout<<bebidas[i].costo;
+		gotoxy(63,4+i);
+		cout<<bebidas[i].cantidad;
+		gotoxy(77,4+i);
+		cout<<bebidas[i].ml;
 	}
-	cout<<"Precione una tecla para continuar...";
+	gotoxy(28,4+(nBebidas));
+	cout<<"--------------------------------------------------------------"<<endl;
+	gotoxy(30,4+(nBebidas+1));
+	cout<<"Presione una tecla para continuar...";
 	cin.ignore();
 	cin.get();
 	limpiar();
 }
 
 void mostrarSnacks(Snack snacks[], int nSnacks){
-	cout<<"ID     ";
-	cout<<"NOMBRE     ";
-	cout<<"COSTO     ";
-	cout<<"CANTIDAD     "<<endl;
+	gotoxy(41,2);
+	cout<<"ID";
+	gotoxy(49,2);
+	cout<<"NOMBRE";
+	gotoxy(61,2);
+	cout<<"COSTO";
+	gotoxy(72,2);
+	cout<<"CANTIDAD";
+	gotoxy(39,3);
+	cout<<"-------------------------------------------"<<endl;
 	for (int i=0; i<nSnacks; i++){
-		cout<<snacks[i].ID<<"     ";
-		cout<<snacks[i].nombre<<"     ";
-		cout<<snacks[i].costo<<"     ";
-		cout<<snacks[i].cantidad<<endl;
+		gotoxy(41,4+i);
+		cout<<snacks[i].ID;
+		gotoxy(47,4+i);
+		cout<<snacks[i].nombre;
+		gotoxy(61,4+i);
+		cout<<snacks[i].costo;
+		gotoxy(74,4+i);
+		cout<<snacks[i].cantidad;
 	}
-	cout<<"Precione una tecla para continuar...";
+	gotoxy(39,4+(nSnacks));
+	cout<<"-------------------------------------------"<<endl;
+	gotoxy(41,4+(nSnacks+1));
+	cout<<"Presione una tecla para continuar...";
 	cin.ignore();
 	cin.get();
 	limpiar();
 }
 
 void mostrarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
-	cout<<"ID     ";
-	cout<<"NOMBRE     ";
-	cout<<"COSTO     ";
-	cout<<"CANTIDAD     "<<endl;
+	gotoxy(41,2);
+	cout<<"ID";
+	gotoxy(49,2);
+	cout<<"NOMBRE";
+	gotoxy(61,2);
+	cout<<"COSTO";
+	gotoxy(72,2);
+	cout<<"CANTIDAD";
+	gotoxy(39,3);
+	cout<<"-------------------------------------------"<<endl;
 	for (int i=0; i<nAbarrotes; i++){
-		cout<<abarrotes[i].ID<<"     ";
-		cout<<abarrotes[i].nombre<<"     ";
-		cout<<abarrotes[i].costo<<"     ";
-		cout<<abarrotes[i].cantidad<<endl;
+		gotoxy(41,4+i);
+		cout<<abarrotes[i].ID;
+		gotoxy(47,4+i);
+		cout<<abarrotes[i].nombre;
+		gotoxy(61,4+i);
+		cout<<abarrotes[i].costo;
+		gotoxy(74,4+i);
+		cout<<abarrotes[i].cantidad;
 	}
-	cout<<"Precione una tecla para continuar...";
+	gotoxy(39,4+(nAbarrotes));
+	cout<<"-------------------------------------------"<<endl;
+	gotoxy(41,4+(nAbarrotes+1));
+	cout<<"Presione una tecla para continuar...";
 	cin.ignore();
 	cin.get();
 	limpiar();
@@ -231,9 +272,17 @@ pair<int, int> insertarSnack(Snack snacks[], int nSnacks, int idMaxSnacks){
 		limpiar();
 		nSnacks++;
 		idMaxSnacks++;
+		gotoxy(43,12);
+    	cout << "---------------------------------" <<endl;
+    	gotoxy(45,13);
 		cout<<"¿Desea agregar otro producto?"<<endl;
+		gotoxy(45,14);
 		cout<<"1) Sí"<<endl;
+		gotoxy(45,15);
 		cout<<"2) No"<<endl;
+		gotoxy(43,16);
+    	cout << "---------------------------------" <<endl;
+		gotoxy(45,17);
 		cout<<"Ingresa tu opción: ";
 		cin>>option;
 		if(option == 1){
@@ -277,9 +326,17 @@ pair<int, int> insertarAbarrote(Abarrote abarrotes[], int nAbarrotes, int idMaxA
 		limpiar();
 		nAbarrotes++;
 		idMaxAbarrotes++;
+		gotoxy(43,12);
+    	cout << "---------------------------------" <<endl;
+    	gotoxy(45,13);
 		cout<<"¿Desea agregar otro producto?"<<endl;
+		gotoxy(45,14);
 		cout<<"1) Sí"<<endl;
+		gotoxy(45,15);
 		cout<<"2) No"<<endl;
+		gotoxy(43,16);
+    	cout << "---------------------------------" <<endl;
+		gotoxy(45,17);
 		cout<<"Ingresa tu opción: ";
 		cin>>option;
 		if(option == 1){
@@ -297,25 +354,45 @@ pair<int, int> insertarAbarrote(Abarrote abarrotes[], int nAbarrotes, int idMaxA
 void buscarBebidas(Bebida bebidas[], int nBebidas) {
     int ID, inicio = 0, fin = nBebidas - 1;
     bool encontrado = false;
-    
+    gotoxy(39,14);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(39,16);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(41,15);
     cout << "Digite ID del producto que desea buscar: ";
     cin >> ID;
+    limpiar();
     
     while (inicio <= fin) {
         int medio = inicio + (fin - inicio) / 2;
         
         if (bebidas[medio].ID == ID) {
-            cout << "ID     ";
-            cout << "NOMBRE     ";
-            cout << "COSTO     ";
-            cout << "CANTIDAD     ";
-            cout << "CAPACIDAD (ml)" << endl;
-            cout << bebidas[medio].ID << "     ";
-            cout << bebidas[medio].nombre << "     ";
-            cout << bebidas[medio].costo << "     ";
-            cout << bebidas[medio].cantidad << "     ";
+            gotoxy(30,11);
+			cout<<"ID";
+			gotoxy(38,11);
+			cout<<"NOMBRE";
+			gotoxy(50,11);
+			cout<<"COSTO";
+			gotoxy(61,11);
+			cout<<"CANTIDAD";
+			gotoxy(74,11);
+			cout<<"CAPACIDAD (ml)"<<endl;
+			gotoxy(28,12);
+			cout<<"--------------------------------------------------------------"<<endl;
+			gotoxy(30,13);
+            cout << bebidas[medio].ID;
+            gotoxy(38,13);
+            cout << bebidas[medio].nombre;
+            gotoxy(50,13);
+            cout << bebidas[medio].costo;
+            gotoxy(64,13);
+            cout << bebidas[medio].cantidad;
+            gotoxy(77,13);
             cout << bebidas[medio].ml << endl;
-            cout<<"Precione una tecla para continuar...";
+            gotoxy(28,14);
+			cout<<"--------------------------------------------------------------"<<endl;
+			gotoxy(30,15);
+            cout<<"Presione una tecla para continuar...";
 			cin.ignore();
 			cin.get();
 			limpiar();
@@ -329,30 +406,51 @@ void buscarBebidas(Bebida bebidas[], int nBebidas) {
     }
     
     if (!encontrado) {
-        cout << "No se encontro el elemento" << endl;
+        gotoxy(47,14);
+        cout << "No se encontró el elemento." << endl;
+        retrasar();
+        limpiar();
     }
 }
 
 void buscarSnacks(Snack snacks[], int nSnacks){
 	int ID, inicio = 0, fin = nSnacks - 1;
     bool encontrado = false;
-    
+    gotoxy(39,14);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(39,16);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(41,15);
     cout << "Digite ID del producto que desea buscar: ";
     cin >> ID;
+    limpiar();
     
     while (inicio <= fin) {
         int medio = inicio + (fin - inicio) / 2;
         
         if (snacks[medio].ID == ID) {
-            cout << "ID     ";
-            cout << "NOMBRE     ";
-            cout << "COSTO     ";
-            cout << "CANTIDAD"<< endl;
-            cout << snacks[medio].ID << "     ";
-            cout << snacks[medio].nombre << "     ";
-            cout << snacks[medio].costo << "     ";
-            cout << snacks[medio].cantidad << endl;
-            cout<<"Precione una tecla para continuar...";
+            gotoxy(41,11);
+			cout<<"ID";
+			gotoxy(49,11);
+			cout<<"NOMBRE";
+			gotoxy(61,11);
+			cout<<"COSTO";
+			gotoxy(72,11);
+			cout<<"CANTIDAD";
+			gotoxy(39,12);
+			cout<<"-------------------------------------------"<<endl;
+			gotoxy(41,13);
+            cout << snacks[medio].ID;
+            gotoxy(49,13);
+            cout << snacks[medio].nombre;
+            gotoxy(61,13);
+            cout << snacks[medio].costo;
+            gotoxy(75,13);
+            cout << snacks[medio].cantidad;
+            gotoxy(39,14);
+			cout<<"-------------------------------------------"<<endl;
+			gotoxy(41,15);
+            cout<<"Presione una tecla para continuar...";
 			cin.ignore();
 			cin.get();
 			limpiar();
@@ -366,30 +464,50 @@ void buscarSnacks(Snack snacks[], int nSnacks){
     }
     
     if (!encontrado) {
-        cout << "No se encontro el elemento" << endl;
+        gotoxy(47,14);
+        cout << "No se encontró el elemento." << endl;
+        retrasar();
+        limpiar();
     }
 }
 
 void buscarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
 	int ID, inicio = 0, fin = nAbarrotes - 1;
     bool encontrado = false;
-    
+    gotoxy(39,14);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(39,16);
+    cout << "----------------------------------------------" <<endl;
+    gotoxy(41,15);
     cout << "Digite ID del producto que desea buscar: ";
     cin >> ID;
-    
+    limpiar();
     while (inicio <= fin) {
         int medio = inicio + (fin - inicio) / 2;
         
         if (abarrotes[medio].ID == ID) {
-            cout << "ID     ";
-            cout << "NOMBRE     ";
-            cout << "COSTO     ";
-            cout << "CANTIDAD"<< endl;
-            cout << abarrotes[medio].ID << "     ";
-            cout << abarrotes[medio].nombre << "     ";
-            cout << abarrotes[medio].costo << "     ";
-            cout << abarrotes[medio].cantidad << endl;
-            cout<<"Precione una tecla para continuar...";
+            gotoxy(41,11);
+			cout<<"ID";
+			gotoxy(49,11);
+			cout<<"NOMBRE";
+			gotoxy(61,11);
+			cout<<"COSTO";
+			gotoxy(72,11);
+			cout<<"CANTIDAD";
+			gotoxy(39,12);
+			cout<<"-------------------------------------------"<<endl;
+			gotoxy(41,13);
+            cout << abarrotes[medio].ID;
+            gotoxy(49,13);
+            cout << abarrotes[medio].nombre;
+            gotoxy(61,13);
+            cout << abarrotes[medio].costo;
+            gotoxy(75,13);
+            cout << abarrotes[medio].cantidad;
+            gotoxy(39,14);
+			cout<<"-------------------------------------------"<<endl;
+			gotoxy(41,15);
+            cout<<"Presione una tecla para continuar...";
 			cin.ignore();
 			cin.get();
 			limpiar();
@@ -403,7 +521,10 @@ void buscarAbarrotes(Abarrote abarrotes[], int nAbarrotes){
     }
     
     if (!encontrado) {
-        cout << "No se encontro el elemento" << endl;
+    	gotoxy(47,14);
+        cout << "No se encontró el elemento." << endl;
+        retrasar();
+        limpiar();
     }
 }
 
@@ -586,12 +707,14 @@ void actualizarAbarrote(Abarrote abarrotes[], int nAbarrotes){
             }
         }
         if (!encontrado) {
+        	gotoxy(55,16);
             cout << "¡ID no encontrado!" << endl;
             retrasar();
             limpiar();
             continuar = continuarModificar();
             continue;
         }
+        gotoxy(55,16);
         cout << "¡ID encontrado!" << endl;
         retrasar();
         limpiar();
@@ -693,12 +816,16 @@ int eliminarSnack(Snack snacks[], int nSnacks) {
             encontrado = true;
             gotoxy(50,17);
             cout << "Producto eliminado." << endl;
+            retrasar();
+            limpiar();
             return nSnacks;
         }
     }
     if (!encontrado) {
     	gotoxy(50,17);
         cout << "Producto no encontrado." << endl;
+        retrasar();
+        limpiar();
     }
     return nSnacks;
 }
@@ -732,9 +859,17 @@ int eliminarAbarrote(Abarrote abarrotes[], int nAbarrotes) {
 
 bool continuarModificar(){
 	int optionContinuar;
+	gotoxy(43,12);
+    cout << "---------------------------------" <<endl;
+    gotoxy(45,13);
 	cout<<"¿Desea modificar otro producto?"<<endl;
+	gotoxy(45,14);
 	cout<<"1) Sí"<<endl;
+	gotoxy(45,15);
 	cout<<"2) No"<<endl;
+	gotoxy(43,16);
+    cout << "---------------------------------" <<endl;
+    gotoxy(45,17);
 	cout<<"Ingresa tu opción: ";
 	cin>>optionContinuar;
 	if(optionContinuar == 1){

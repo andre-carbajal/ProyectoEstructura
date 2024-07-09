@@ -24,7 +24,6 @@ int main(){
 
 	Persona usuarios[999];
 	int nPersonas = 5;
-
 	string usuario, contrasena;
 
 	int opcionLogin, opcionInv, opcionUsos, usu;
@@ -120,7 +119,10 @@ int main(){
 										break;
 									default:
 										opcioninvalida(opcionLogin);
+										gotoxy(41,13);
 										cout<<"----------Opcion invalida---------"<<endl;
+										retrasar();
+										limpiar();
 										continuarMenu = true;
 										break;
 								}
@@ -169,7 +171,10 @@ int main(){
 										break;
 									default:
 										opcioninvalida(opcionLogin);
+										gotoxy(41,13);
 										cout<<"----------Opcion invalida---------"<<endl;
+										retrasar();
+										limpiar();
 										continuarMenu = true;
 										break;
 								}
@@ -218,7 +223,10 @@ int main(){
 										break;
 									default:
 										opcioninvalida(opcionLogin);
+										gotoxy(41,13);
 										cout<<"----------Opcion invalida---------"<<endl;
+										retrasar();
+										limpiar();
 										continuarMenu = true;
 										break;
 								}
@@ -231,7 +239,10 @@ int main(){
 							break;
 						default:
 							opcioninvalida(opcionLogin);
+							gotoxy(41,13);
 							cout<<"----------Opcion invalida---------"<<endl;
+							retrasar();
+							limpiar();
 							continuarInv = true;
 							break;
 					}
@@ -254,15 +265,16 @@ int main(){
 			nPersonas = registrarUsuario(usuarios, nPersonas);
 			limpiar();
 			break;
-
 		case 3:
 			cout << "Saliendo..." << endl;
 			return 0;
-
 		default:
 			limpiar();
 			opcioninvalida(opcionLogin);
+			gotoxy(41,13);
 			cout<<"----------Opcion invalida---------"<<endl;
+			retrasar();
+			limpiar();
 			break;
 		}
 	} while (intentos < maxintentos);
