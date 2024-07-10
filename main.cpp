@@ -234,7 +234,7 @@ int main(){
 							
 							break;
 						case 4:
-							guardarInventario(bebidas, nBebidas, snacks, nSnacks, abarrotes, nAbarrotes);
+							guardarInventario(bebidas, nBebidas, snacks, nSnacks, abarrotes, nAbarrotes, usuarios, nPersonas);
 							continuarInv = false;
 							break;
 						default:
@@ -266,6 +266,7 @@ int main(){
 			limpiar();
 			break;
 		case 3:
+			guardarInventario(bebidas, nBebidas, snacks, nSnacks, abarrotes, nAbarrotes, usuarios, nPersonas);
 			cout << "Saliendo..." << endl;
 			return 0;
 		default:

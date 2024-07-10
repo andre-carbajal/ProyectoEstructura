@@ -23,3 +23,12 @@ ID;nombre;costo;cantidad
 2;Lentejas;1.70;40
 3;Azucar;1.50;70
 4;Harina-de-Trigo;1.60;90
+;;;;
+Usuarios;;;;
+nombre;role(0:Admin, 1:Role)
+Andre;1
+Marymar;1
+Fatima;1
+Mariela;1
+Haydee;0
+Farid;1

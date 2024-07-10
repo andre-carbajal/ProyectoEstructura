@@ -7,19 +7,19 @@
 using namespace std;
 
 void initUsuarios(Persona personas[]) {
-    personas[0].usuario = "Andre";
+	strcpy(personas[0].usuario, "Andre");
     personas[0].contrasena = "andre";
     personas[0].role = 1;
-    personas[1].usuario = "Marymar";
+    strcpy(personas[1].usuario, "Marymar");
     personas[1].contrasena = "marymar";
     personas[1].role = 1;
-    personas[2].usuario = "Fatima";
+    strcpy(personas[2].usuario, "Fatima");
     personas[2].contrasena = "fatima";
     personas[2].role = 1;
-    personas[3].usuario = "Mariela";
+    strcpy(personas[3].usuario, "Mariela");
     personas[3].contrasena = "mariela";
     personas[3].role = 1;
-    personas[4].usuario = "Haydee";
+    strcpy(personas[4].usuario, "Haydee");
     personas[4].contrasena = "haydee";
     personas[4].role = 0;
 }
@@ -75,7 +75,15 @@ int registrarUsuario(Persona personas[], int nPersonas){
 	cout << "------------------------------------" <<endl;
 	gotoxy(44,13);
 	cout << "Ingrese el usuario: ";
-	cin >> personas[nPersonas].usuario;
+	cin.ignore();
+	cin.getline(personas[nPersonas].usuario, 100);
+
+    for (int i = 0; i < strlen(personas[nPersonas].usuario); i++) {
+        if (personas[nPersonas].usuario[i] == ' ') {
+            personas[nPersonas].usuario[i] = '-';
+        }
+    }
+    
 	gotoxy(44,14);
 	cout << "Ingrese la contraseña: ";
 	personas[nPersonas].contrasena = ocultarcontrasena();

@@ -916,7 +916,7 @@ void ordenamientoAbarrotes(Abarrote abarrotes[], int nAbarrotes) {
     }
 }
 
-void guardarInventario(Bebida bebidas[], int nBebidas, Snack snacks[], int nSnacks, Abarrote abarrotes[], int nAbarrotes){
+void guardarInventario(Bebida bebidas[], int nBebidas, Snack snacks[], int nSnacks, Abarrote abarrotes[], int nAbarrotes, Persona personas[], int nPersonas){
 	FILE *inventario;
 	
 	inventario = fopen("inventario.csv", "w");
@@ -946,6 +946,15 @@ void guardarInventario(Bebida bebidas[], int nBebidas, Snack snacks[], int nSnac
 		fprintf(inventario, "%d;%s;%.2f;%d\n",
 		abarrotes[i].ID, abarrotes[i].nombre, abarrotes[i].costo, abarrotes[i].cantidad);
 	}
+	fprintf(inventario, "%s\n", ";;;;");
+	
+	fprintf(inventario, "%s\n", "Usuarios;;;;");
+	fprintf(inventario, "%s\n", "nombre;role(0:Admin, 1:Role)");
+	for(int i = 0; i<nPersonas; i++){
+		fprintf(inventario, "%s;%d\n",
+		personas[i].usuario, personas[i].role);
+	}
+	
 	
 	fclose(inventario);
 }

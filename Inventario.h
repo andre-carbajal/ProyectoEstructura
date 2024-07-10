@@ -1,6 +1,8 @@
 #ifndef PROYECTOESTRUCTURA_INVENTARIO_H
 #define PROYECTOESTRUCTURA_INVENTARIO_H
 
+#include "Persona.h"
+
 using namespace std;
 
 struct Bebida{
@@ -61,6 +63,6 @@ void ordenamientoBebidas(Bebida bebidas[], int nBebidas);
 void ordenamientoSnacks(Snack snacks[], int nSnacks);
 void ordenamientoAbarrotes(Abarrote abarrotes[], int nAbarrotes);
 
-void guardarInventario(Bebida bebidas[], int nBebidas, Snack snacks[], int nSnacks, Abarrote abarrotes[], int nAbarrotes);
+void guardarInventario(Bebida bebidas[], int nBebidas, Snack snacks[], int nSnacks, Abarrote abarrotes[], int nAbarrotes, Persona Personas[], int nPersonas);
 
 #endif //PROYECTOESTRUCTURA_INVENTARIO_H

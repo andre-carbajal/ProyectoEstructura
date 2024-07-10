@@ -6,7 +6,7 @@
 using namespace std;
 
 struct Persona {
-    string usuario;
+    char usuario[100];
     string contrasena;
     int role; // role 0: admin, role 1: user
 };
